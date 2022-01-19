@@ -247,3 +247,64 @@ a{
 .h4{
     text-align: center;
 }
+
+.gray-offer{
+    background: #f0f0f0;
+    width: 60%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.offer{
+    /* background: rgb(209, 209, 209); */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-left: 20px;
+}
+
+.percent{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    margin-left: 5px;
+    
+}
+
+#font-bold{
+    font-weight: bolder;
+}
+
+.trending-now{
+    background: #f0f0f0;
+    margin-top: 60px;
+}
+
+#trending-now{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+.trending-item{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    padding: 0 20px;
+    
+}
+
+.trending-items{
+    display: flex;
+    background: #000;
+    color: white;
+    border-radius: 30px;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.arrow{
+    margin-top: 15px;
+    padding:0 15px;
+}
