@@ -230,3 +230,20 @@ a{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background:#bb2e03;
 }
+
+/* listOfitems------------------------------------------------------ */
+
+.listOfitems{
+    display: flex;
+    margin: 30px 0;
+    justify-content: space-evenly;
+}
+
+.listImage{
+    height: 140px;
+    width: 280px;
+}
+
+.h4{
+    text-align: center;
+}
