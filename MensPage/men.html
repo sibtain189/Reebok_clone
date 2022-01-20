@@ -25,7 +25,24 @@
     ></script>
 
     <style>
-      
+      .rb-cross:hover {
+        cursor: pointer;
+      }
+      .clear-all {
+        font-size: 10px;
+        display: flex;
+        padding-top: 6px;
+        display: none;
+      }
+      .clear-all:hover {
+        cursor: pointer;
+      }
+      .clear-all > i {
+        padding: 2px 0 0 3px;
+      }
+      .clear-all > p {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -46,10 +63,16 @@
             <div class="rb-filtered-items">
               <div class="rb-filtered-items-head">
                 <p class="fil-head">Your Selection</p>
+
+                <div class="clear-all">
+                  <p>Clear All</p>
+                  <i class="fas fa-times-circle"></i>
+                </div>
               </div>
               <div class="rb-filter-values">
                 <div class="rb-cross">
                   <i class="fas fa-times-circle" aria-hidden="true"></i>
+
                   <p>male</p>
                 </div>
               </div>
@@ -68,11 +91,18 @@
                   value="male"
                   id="cb-male"
                   checked="checked"
+                  name="gender"
                 />
                 <span>Male</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="female" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="female"
+                  id="female"
+                  name="gender"
+                />
                 <span>Female</span>
               </div>
             </div>
@@ -84,11 +114,21 @@
             </div>
             <div class="rb-filter-checkbox-category">
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="footwear" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="footwear"
+                  id="footwear"
+                />
                 <span>FootWear</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="clothing" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="clothing"
+                  id="clothing"
+                />
                 <span>Clothing</span>
               </div>
               <div class="rb-cb">
@@ -96,6 +136,7 @@
                   type="checkbox"
                   class="rb-filter-cb"
                   value="accessories"
+                  id="accessories"
                 />
                 <span>Accessories</span>
               </div>
@@ -108,23 +149,48 @@
             </div>
             <div class="rb-filter-checkbox-pT">
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="shoes" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="shoes"
+                  id="shoes"
+                />
                 <span>Shoes</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="tshirts" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="tshirts"
+                  id="tshirts"
+                />
                 <span>T-shirts</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="hoodies" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="hoodies"
+                  id="hoodies"
+                />
                 <span>Hoodies</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="pants" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="pants"
+                  id="pants"
+                />
                 <span>Pants</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="bags" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="bags"
+                  id="bags"
+                />
                 <span>Bags</span>
               </div>
               <div class="rb-cb view-more">
@@ -139,11 +205,21 @@
             </div>
             <div class="rb-filter-checkbox-brand">
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="classic" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="classic"
+                  id="classic"
+                />
                 <span>Classic</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="sport" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="sport"
+                  id="sport"
+                />
                 <span>Sport</span>
               </div>
             </div>
@@ -155,23 +231,48 @@
             </div>
             <div class="rb-filter-checkbox-pT">
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="shoes" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="no-discount"
+                  id="no-discount"
+                />
                 <span>No Discount</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="tshirts" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="10-d"
+                  id="10-d"
+                />
                 <span>1-10%</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="hoodies" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="20-d"
+                  id="20-d"
+                />
                 <span>11-20%</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="pants" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="30-d"
+                  id="30-id"
+                />
                 <span>21-30%</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="bags" />
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="30-d"
+                  id="40-id"
+                />
                 <span>31-40%</span>
               </div>
               <div class="rb-cb view-more">
@@ -180,7 +281,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div id="rb-rt-container">
           <div class="rb-men-sorting-items">
             <div>
               <select id="sort" onchange="sortItems()" class="col">
@@ -253,24 +354,27 @@
     // this will contain a reference to the checkbox
     if (this.checked) {
       // the checkbox is now checked
+      // var cat = this.name + " :";
       var val = checkedArray.push(this.value);
-      console.log(checkedArray);
-      document.querySelector(".rb-filter-values").innerHTML = "";
-      checkedArray.forEach(function (item, index) {
-        var div = document.createElement("div");
-        div.setAttribute("class", "rb-cross");
-        var cross = document.createElement("i");
-        cross.setAttribute("class", "fas fa-times-circle");
-        var p = document.createElement("p");
-        p.textContent = item;
-        div.append(cross, p);
-        document.querySelector(".rb-filter-values").append(div);
-      });
+      //console.log(checkedArray);
+      filterDisplay(checkedArray, val);
     } else {
       // the checkbox is now no longer checked
-      alert("not checked");
+      var val = this.value;
+      // alert("not checked"+val);
+      document.getElementById(val).checked = false;
+      $(".clear-all").hide();
     }
   });
+
+  $(".clear-all").click(function () {
+    alert("navigate to home page");
+    window.location.href = "#";
+  });
+
+ 
+
+ 
 
   var pages = 21;
   for (var i = 1; i <= pages; i++) {
