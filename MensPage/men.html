@@ -106,20 +106,24 @@
             </div>
             <div class="rb-filter-checkbox-pT">
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="shoe" />
-                <span>Shoe</span>
+                <input type="checkbox" class="rb-filter-cb" value="shoes" />
+                <span>Shoes</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="tshirt" />
-                <span>T-shirt</span>
+                <input type="checkbox" class="rb-filter-cb" value="tshirts" />
+                <span>T-shirts</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="pant" />
-                <span>Pant</span>
+                <input type="checkbox" class="rb-filter-cb" value="hoodies" />
+                <span>Bags</span>
               </div>
               <div class="rb-cb">
-                <input type="checkbox" class="rb-filter-cb" value="bag" />
-                <span>Bag</span>
+                <input type="checkbox" class="rb-filter-cb" value="pants" />
+                <span>Pants</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="bags" />
+                <span>Bags</span>
               </div>
             </div>
           </div>
@@ -150,6 +154,28 @@
                 <option value="popular">Most Popular</option>
                 <option value="new">Newsest Arrival</option>
               </select>
+            </div>
+            <div
+              class="btn-group me-2"
+              role="group"
+              aria-label="First group"
+              id="items-view"
+            >
+              <button type="button" class="btn btn-outline">VIEW :</button>
+              <button type="button" class="btn border-right">30</button>
+              <button type="button" class="btn border-right">50</button>
+              <button type="button" class="btn border-right">60</button>
+              <button type="button" class="btn">80</button>
+            </div>
+            <div id="rb-pages-div">
+              <select
+                name="rb-item-pages"
+                id="rb-pages"
+                class="btn btn-outline-secondary"
+              ></select>
+              <span>&nbsp of&nbsp 21</span>
+              <span><i class="fas fa-chevron-circle-left"></i></span>
+              <span><i class="fas fa-chevron-circle-right"></i></span>
             </div>
           </div>
           <div id="rb-men-display"></div>
@@ -209,4 +235,12 @@
       alert("not checked");
     }
   });
+
+  var pages = 21;
+  for (var i = 1; i <= pages; i++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", i);
+    option.textContent = i;
+    document.getElementById("rb-pages").append(option);
+  }
 </script>

@@ -171,15 +171,14 @@
   /* background-color: teal; */
   color: white;
 }
-.rb-men-filtered-items {
-  /* border: 1px solid red; */
-}
+
 .rb-men-sorting-items {
   display: flex;
   justify-content: space-between;
   font-weight: unset;
   font-family: NeuePlakTextRegular;
   padding: 25px 0 25px 0;
+  width: 90%;
 }
 .rb-men-sorting-items #sort {
   padding: 5px;
@@ -229,6 +228,34 @@
 }
 .rb-filtered-items-head {
   border-bottom-style: dotted;
+}
+#rb-pages:hover {
+  background-color: white;
+  color: black;
+}
+#rb-pages-div i {
+  color: grey;
+  font-size: 12px;
+}
+#rb-pages-div i:hover {
+  color: crimson;
+}
+#items-view > button:hover {
+  color: crimson;
+}
+#items-view .border-right {
+  position: relative;
+}
+
+#items-view .border-right:after {
+  content: " ";
+  position: absolute;
+  border-left: 1px lightgrey solid;
+  top: 30%;
+  right: 0;
+  height: 40%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @media only screen and (max-device-width: 720px) {
