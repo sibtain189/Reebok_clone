@@ -308,3 +308,47 @@ a{
     margin-top: 15px;
     padding:0 15px;
 }
+
+.explore-more{
+    font-size: 25px;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+}
+
+.explore-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+/* #explore-more{
+    height: 10px;
+} */
+
+.explore-outline{
+    width: 25%;
+    /* height: 30px; */
+    border: 1px solid black;
+    margin: auto;
+}
+
+.explore-items{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.arrow1{
+    margin-top: 15px;
+}
+
+.explore-image{
+    width: 600px;
+    height: 320px;
+}
+
+.explore-text{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
