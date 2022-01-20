@@ -11,6 +11,8 @@
   flex-direction: column;
   align-items: flex-end;
   margin: 0 5% 0 4%;
+  font-size: 14px;
+  font-family: NeuePlakTextRegular;
 }
 #rb-men-display {
   display: grid;
@@ -255,6 +257,9 @@
   height: 40%;
   margin-top: auto;
   margin-bottom: auto;
+}
+.view-more {
+  padding-left: 10px;
 }
 
 @media only screen and (max-device-width: 720px) {
