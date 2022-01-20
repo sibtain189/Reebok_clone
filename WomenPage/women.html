@@ -155,6 +155,28 @@
                 <option value="new">Newest Arrival</option>
               </select>
             </div>
+            <div
+              class="btn-group me-2"
+              role="group"
+              aria-label="First group"
+              id="items-view"
+            >
+              <button type="button" class="btn btn-outline">VIEW :</button>
+              <button type="button" class="btn border-right">30</button>
+              <button type="button" class="btn border-right">50</button>
+              <button type="button" class="btn border-right">60</button>
+              <button type="button" class="btn">80</button>
+            </div>
+            <div id="rb-pages-div">
+              <select
+                name="rb-item-pages"
+                id="rb-pages"
+                class="btn btn-outline-secondary"
+              ></select>
+              <span>&nbsp of&nbsp 21</span>
+              <span><i class="fas fa-chevron-circle-left"></i></span>
+              <span><i class="fas fa-chevron-circle-right"></i></span>
+            </div>
           </div>
           <div id="rb-men-display"></div>
         </div>
@@ -213,4 +235,12 @@
       alert("not checked");
     }
   });
+
+  var pages = 21;
+  for (var i = 1; i <= pages; i++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", i);
+    option.textContent = i;
+    document.getElementById("rb-pages").append(option);
+  }
 </script>
