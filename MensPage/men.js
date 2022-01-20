@@ -132,6 +132,8 @@ function displayItems(mens_data) {
       $(".clear-all").attr("style", "display:flex");
       $(".clear-all").show();
       $(".fil-head").attr("style", "font-size:12px");
+    }else{
+      $(".clear-all").hide();
     }
     document.querySelector(".rb-filter-values").innerHTML = "";
     checkedArray.forEach(function (item, index) {
