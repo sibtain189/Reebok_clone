@@ -1,12 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Men Page</h1>
-</body>
+    <link rel="stylesheet" href="men.css" />
+    <script src="men.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8b3a760ff3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style></style>
+  </head>
+  <body>
+    <div id="rb-men-container-main">
+      <div class="rb-men-prepaid-offer-banner">
+        <p>
+          Extra <strong>10% off</strong> " ON PREPAID ORDERS MINIMUM CART VALUE
+          – INR 1000."
+        </p>
+      </div>
+      <div class="rb-men-products-banner">
+        <h1>All men's products</h1>
+        <p>/&nbsp;1854&nbsp;Products</p>
+      </div>
+      <div id="rb-men-container">
+        <div id="rb-filter">
+          <div class="rb-men-filtered-items">
+            <div class="rb-filtered-items">
+              <div class="rb-filtered-items-head">
+                <p class="fil-head">Your Selection</p>
+              </div>
+              <div class="rb-filter-values">
+                <div class="rb-cross">
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                  <p>male</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-gender">
+            <div class="rb-filter-cat-gender">
+              <div class="rb-filter-head">Gender</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-gender">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="male"
+                  id="cb-male"
+                  checked="checked"
+                />
+                <span>Male</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="female" />
+                <span>Female</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-category">
+            <div class="rb-filter-cat-category">
+              <div class="rb-filter-head">CATEGORY</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-category">
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="footwear" />
+                <span>FootWear</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="clothing" />
+                <span>Clothing</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="accessories"
+                />
+                <span>Accessories</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-pT">
+            <div class="rb-filter-cat-pT">
+              <div class="rb-filter-head">PRODUCT TYPE</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-pT">
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="shoe" />
+                <span>Shoe</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="tshirt" />
+                <span>T-shirt</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="pant" />
+                <span>Pant</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="bag" />
+                <span>Bag</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-brand">
+            <div class="rb-filter-cat-brand">
+              <div class="rb-filter-head">Brand</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-brand">
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="classic" />
+                <span>Classic</span>
+              </div>
+              <div class="rb-cb">
+                <input type="checkbox" class="rb-filter-cb" value="sport" />
+                <span>Sport</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="rb-men-sorting-items">
+            <div>
+              <select id="sort" onchange="sortItems()" class="col">
+                <option value="a">Sort By</option>
+                <option value="asc">Price Low To High</option>
+                <option value="desc">Price High To Low</option>
+                <option value="popular">Most Popular</option>
+                <option value="new">Newsest Arrival</option>
+              </select>
+            </div>
+          </div>
+          <div id="rb-men-display"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+<script>
+  var mens_data = JSON.parse(localStorage.getItem("reebok-men-data")) || [];
+  var cart_Data = JSON.parse(localStorage.getItem("reebok-cart-data")) || [];
+  displayItems(mens_data);
+
+  //filter
+
+  //gender
+  $(".rb-filter-cat-gender").click(function () {
+    $(".rb-filter-checkbox-gender").toggle();
+  });
+
+  //category
+  $(".rb-filter-cat-category").click(function () {
+    $(".rb-filter-checkbox-category").toggle();
+  });
+
+  //productType
+  $(".rb-filter-cat-pT").click(function () {
+    $(".rb-filter-checkbox-pT").toggle();
+  });
+
+  //brand
+  $(".rb-filter-cat-brand").click(function () {
+    $(".rb-filter-checkbox-brand").toggle();
+  });
+
+  var checkedArray = ["male"];
+
+  $("#rb-filter :checkbox").change(function () {
+    // this will contain a reference to the checkbox
+    if (this.checked) {
+      // the checkbox is now checked
+      var val = checkedArray.push(this.value);
+      console.log(checkedArray);
+      document.querySelector(".rb-filter-values").innerHTML = "";
+      checkedArray.forEach(function (item, index) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "rb-cross");
+        var cross = document.createElement("i");
+        cross.setAttribute("class", "fas fa-times-circle");
+        var p = document.createElement("p");
+        p.textContent = item;
+        div.append(cross, p);
+        document.querySelector(".rb-filter-values").append(div);
+      });
+    } else {
+      // the checkbox is now no longer checked
+      alert("not checked");
+    }
+  });
+</script>
