@@ -16,6 +16,14 @@ body {
     background: white;
 }
 
+nav{
+    position:relative;
+    z-index: 999;
+    padding: -2px;
+    /* line-height: 65px; */
+    /* height: 65px; */
+}
+
 header{
     background: white;
     padding-top: 10px;
@@ -352,3 +360,93 @@ a{
     font-size: 15px;
     margin-bottom: 32px;
 }
+
+/* z-index--------------------------------------------------------------------- */
+
+
+.nav-links li a{
+    font-weight: 600;
+}
+
+.nav-links li a:hover{
+    /* font-weight: 800; */
+    color: rgb(219, 27, 27);
+    font-size: 17px;
+}
+
+/* paste here z-index--------------------------------------------- */
+
+.nav-links li:hover .mega-box{
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+    transition: all 0.3s ease;
+}
+
+.mega-box{
+    position: absolute;
+    top: 85px;
+    /* background: #000; */
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.mega-box .content{
+    /* background: rgb(54, 52, 52); */
+    background: white;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content .row{
+    width: calc(25% - 30px);
+    line-height: 45px;
+}
+
+/* .content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.content .row header{
+    /* color: bl; */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* .content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid cadetblue;
+} */
+
+.content .row:nth-child(1),
+.content .row:nth-child(2){
+    border-left: 0px;
+}
+
+.row .mega-links li{
+    padding: 0 20px;
+}
+
+.row .mega-links li a{
+    /* padding: 0 20px; */
+    /* color: azure; */
+    color: gray;
+    font-size: 13px;
+    /* display: block; */
+}
+
+.row .mega-links li a:hover{
+    color: rgb(219, 27, 27);
+}
+
+.mega-links li{
+    overflow: hidden;
+}
+
