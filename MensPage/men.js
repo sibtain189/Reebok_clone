@@ -125,3 +125,36 @@ function displayItems(mens_data) {
     //Go to Product Page link
     window.location.href = "#";
   }
+
+  function filterDisplay(checkedArray, val) {
+    var len = checkedArray.length;
+    if (len > 1) {
+      $(".clear-all").attr("style", "display:flex");
+      $(".clear-all").show();
+      $(".fil-head").attr("style", "font-size:12px");
+    }
+    document.querySelector(".rb-filter-values").innerHTML = "";
+    checkedArray.forEach(function (item, index) {
+      var div = document.createElement("div");
+      div.setAttribute("class", "rb-cross");
+      var cross = document.createElement("i");
+      cross.setAttribute("class", "fas fa-times-circle");
+      var p = document.createElement("p");
+      p.textContent = item;
+      div.append(cross, p);
+      div.addEventListener("click", function () {
+        removeSelectedFilter(index);
+      });
+      document.querySelector(".rb-filter-values").append(div);
+    });
+  }
+
+  function removeSelectedFilter(index) {
+    console.log("checkedArray" + checkedArray);
+    console.log("index" + index);
+    var id = checkedArray[index];
+    console.log(id);
+    document.getElementById(id).checked = false;
+    checkedArray.splice(index, 1);
+    filterDisplay(checkedArray);
+  }

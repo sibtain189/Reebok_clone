@@ -203,13 +203,20 @@
 .rb-cross {
   display: flex;
   border-bottom: ridge;
+  font-size: 16px;
 }
 .rb-cross i {
-  margin: 5px 5px 0 5px;
+  margin: 5px 10px 0 5px;
+
 }
 .rb-cross p {
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-bottom: 1px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 3px;
+
 }
 .rb-filtered-items {
   border: 1px solid #e3dadb;
@@ -230,6 +237,7 @@
 }
 .rb-filtered-items-head {
   border-bottom-style: dotted;
+  display: flex;
 }
 #rb-pages:hover {
   background-color: white;
@@ -241,6 +249,7 @@
 }
 #rb-pages-div i:hover {
   color: crimson;
+  cursor: pointer;
 }
 #items-view > button:hover {
   color: crimson;
@@ -263,13 +272,43 @@
   padding-left: 10px;
 }
 
+@media only screen and (max-device-width: 1080px) {
+  #rb-men-display {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  #rb-filter {
+    display: none;
+  }
+  #rb-rt-container {
+    margin-left: 15%;
+  }
+}
 @media only screen and (max-device-width: 720px) {
   #rb-men-display {
     grid-template-columns: repeat(2, 1fr);
+  }
+  #rb-filter {
+    display: none;
+  }
+  #items-view {
+    display: none;
+  }
+  #rb-pages-div {
+    display: none;
   }
 }
 @media only screen and (max-device-width: 580px) {
   #rb-men-display {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #rb-filter {
+    display: none;
+  }
+  #items-view {
+    display: none;
+  }
+  #rb-pages-div {
+    display: none;
   }
 }
