@@ -54,7 +54,7 @@
                 <div class="rb-cross">
                   <i class="fas fa-times-circle" aria-hidden="true"></i>
 
-                  <p>male</p>
+                  <p>boy</p>
                 </div>
               </div>
             </div>
@@ -69,22 +69,22 @@
                 <input
                   type="checkbox"
                   class="rb-filter-cb"
-                  value="male"
+                  value="boy"
                   id="cb-male"
                   checked="checked"
                   name="gender"
                 />
-                <span>Male</span>
+                <span>Boys</span>
               </div>
               <div class="rb-cb">
                 <input
                   type="checkbox"
                   class="rb-filter-cb"
-                  value="female"
+                  value="girl"
                   id="female"
                   name="gender"
                 />
-                <span>Female</span>
+                <span>Girls</span>
               </div>
             </div>
           </div>
@@ -418,7 +418,7 @@
 
   $("#rb-filter :checkbox").change(function () {
     // this will contain a reference to the checkbox
-    var checkedArray = ["male"];
+    var checkedArray = ["boy"];
     if (this.checked) {
       // the checkbox is now checked
       // var cat = this.name + " :";
@@ -427,7 +427,7 @@
       // }
       var val = this.value;
 
-      if (val == "female") {
+      if (val == "girl") {
         alert("go to women page");
         window.location.href = "#";
       } else if (
