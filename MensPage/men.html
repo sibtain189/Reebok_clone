@@ -24,9 +24,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <style>
-     
-    </style>
+    <style></style>
   </head>
   <body>
     <div id="rb-men-container-main">
@@ -418,14 +416,43 @@
     $(".rb-filter-checkbox-brand").toggle();
   });
 
-  var checkedArray = ["male"];
-
   $("#rb-filter :checkbox").change(function () {
     // this will contain a reference to the checkbox
+    var checkedArray = ["male"];
     if (this.checked) {
       // the checkbox is now checked
       // var cat = this.name + " :";
-      var val = checkedArray.push(this.value);
+      // if(this.val=="female"){
+      //   alert("");
+      // }
+      var val = this.value;
+
+      if (val == "female") {
+        alert("go to women page");
+        window.location.href = "#";
+      } else if (
+        val == "footwear" ||
+        val == "clothing" ||
+        val == "accessories"
+      ) {
+        filterByCategory(val);
+      } else if (
+        val == "shoes" ||
+        val == "tshirts" ||
+        val == "hoodies" ||
+        val == "pants" ||
+        val == "bags"
+      ) {
+        filterByProductType(val);
+      }
+      else if (
+        val == "classic" ||
+        val == "sport"
+      ) {
+        filterByBrand(val);
+      }
+
+      checkedArray.push(val);
       //console.log(checkedArray);
       filterDisplay(checkedArray, val);
     } else {
@@ -450,4 +477,6 @@
     option.textContent = i;
     document.getElementById("rb-pages").append(option);
   }
+
+  
 </script>
