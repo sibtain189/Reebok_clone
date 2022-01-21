@@ -1,0 +1,108 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200&family=News+Cycle&family=Roboto:wght@300&family=Rubik&family=Spline+Sans:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+#container {
+    /* background-color: rgb(241, 241, 241); */
+    width: 1150px;
+    /* height: 520px; */
+    /* padding: 0 2%; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 13px;
+}
+
+#sign_in_heading {
+    /* letter-spacing: 1.5px; */
+    margin: 2% 0 2% 5%;
+    font-size: 25px;
+    /* font-weight: 100; */
+}
+
+#container > div {
+    width: 30%;
+    height: 100%;
+    /* border: solid; */
+    padding: 1%;
+}
+
+.form > input{
+    width: 98%;
+    height: 33px;
+    margin: 12px 0;
+    padding-left: 3%;
+    border: 1px rgb(192, 192, 192) solid;
+    border-radius: 1px;
+    
+}
+
+.form > input:focus {
+    box-shadow: rgba(34, 126, 231, 0.35) 0px 5px 10px;
+    border: 1px solid rgb(34, 126, 231);
+    outline: none;
+}
+
+#middle input {
+    margin: 7px 0;
+}
+
+#footer a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+#footer {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    /* border: solid; */
+}
+
+#footer a:hover {
+    color: rgb(80, 80, 151);
+    text-decoration: underline;
+}
+
+#sign_in , #middle_sign_in, #left_sign_in{
+    width: 35%;
+    background-color: rgb(209, 32, 62);
+    color: white;
+    text-align: left;
+    padding-left: 4%;
+    height: 38px;
+    border: none;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    font-size: large;
+}
+
+#sign_in:hover {
+    background-color: rgb(206, 55, 80);
+}
+
+.container_heading {
+    /* border: solid; */
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+hr {
+    background-color: rgb(218, 218, 218);
+    border: 0.5px solid rgb(218, 218, 218);
+}
+
+.wrong_left_mail , .wrong_left_pass {
+    color: red;
+    font-size: small;
+}
