@@ -6,9 +6,7 @@ function displayItems(mens_data) {
       var div = document.createElement("div");
       div.setAttribute("class", "rb-card");
       div.setAttribute("id", id);
-      div.addEventListener("click", function () {
-        goToProductPage(index);
-      });
+      
 
       // Showing AddTocart button aand size on hovering
       div.addEventListener("mouseover", function () {
@@ -27,6 +25,9 @@ function displayItems(mens_data) {
 
       var image = document.createElement("img");
       image.setAttribute("src", item.image);
+      image.addEventListener("click", function () {
+        goToProductPage(index);
+      });
 
       var name = document.createElement("p");
       name.setAttribute("class", "rb-product-name");
@@ -54,6 +55,9 @@ function displayItems(mens_data) {
       var details_div = document.createElement("div");
       details_div.setAttribute("class", "rb-product-details");
       details_div.append(name, category, price_span, size);
+      details_div.addEventListener("click", function () {
+        goToProductPage(index);
+      });
 
       var cart_div = document.createElement("div");
       cart_div.setAttribute("class", "rb-cart");
@@ -156,4 +160,25 @@ function displayItems(mens_data) {
     document.getElementById(id).checked = false;
     checkedArray.splice(index, 1);
     filterDisplay(checkedArray);
+  }
+
+  function filterByCategory(val) {
+    var filtered_data = mens_data.filter(function (item, index) {
+      return item.category == val;
+    });
+    displayItems(filtered_data);
+  }
+
+  function filterByProductType(val) {
+    var filtered_data = mens_data.filter(function (item, index) {
+      return item.productType == val;
+    });
+    displayItems(filtered_data);
+  }
+
+  function filterByBrand(val) {
+    var filtered_data = mens_data.filter(function (item, index) {
+      return item.brand == val;
+    });
+    displayItems(filtered_data);
   }
