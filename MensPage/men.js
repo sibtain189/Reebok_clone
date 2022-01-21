@@ -1,3 +1,4 @@
+var mens_data = JSON.parse(localStorage.getItem("reebok-men-data")) || [];
 function displayItems(mens_data) {
     document.getElementById("rb-men-display").innerHTML = "";
     console.log(mens_data);
@@ -148,6 +149,7 @@ function displayItems(mens_data) {
       div.append(cross, p);
       div.addEventListener("click", function () {
         removeSelectedFilter(index,checkedArray);
+        displayItems(mens_data);
       });
       document.querySelector(".rb-filter-values").append(div);
     });
