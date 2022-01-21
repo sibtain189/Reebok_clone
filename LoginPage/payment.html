@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .main {
+            width: 1200px;
+            margin: auto;
+            color: rgb(49, 49, 49);
+        }
+
+        #header{
+            height: 30px;
+            /* border: solid; */
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(207, 207, 207);
+        }
+
+        #header > div {
+            width: 32%;
+            border: 1px solid rgb(180, 180, 180);
+            padding-left: 1%;
+            display: flex;
+            align-items: center;
+        }
+
+        #container {
+            width: 100%;
+            /* height: 500px; */
+            /* background-color: rgb(167, 167, 167); */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #heading_left {
+            font-size: x-large;
+            color: black;
+        }
+
+        #left {
+            width: 70%;
+            height: 100%;
+            border-bottom: 1px solid gray;
+            /* border-top: 1px solid; */
+            /* border: solid; */
+        }
+
+        #right {
+            /* background-color: yellow; */
+            height: 350px;
+            width: 23%;           
+            margin-top: 2%;
+        }
+
+        #heading_right {
+            border-bottom: solid;
+            /* height: 12%; */
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #right_body{
+            font-size: small;
+            /* align-items: center; */
+            padding: 4%;
+            height: 42%;
+            background-color: rgb(240, 240, 240);
+            /* border: solid red; */
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            grid-gap: 0;
+            grid-template-rows: 35% 25% 40%;
+        }
+
+        #right_body > div {
+            /* border-bottom: solid; */
+            display: flex;
+            align-items: center;
+        } 
+        
+        #right_body > div {
+            /* border-bottom: 1px solid; */
+        }
+
+        #right_footer{
+            margin-top: 2%;
+            padding: 2%;
+            height: 42%;
+            background-color: rgb(240, 240, 240);
+        }
+
+        #footer_grid{
+            height: 87%;
+            display: grid;
+        }
+
+        /* #footer_grid > div {
+            border-bottom: 1px solid rgb(158, 158, 158);
+        } */
+        
+
+        #left > div:nth-child(1) {
+            /* border: solid red; */
+            height: 80px;
+            width: 100%;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        #left > div:nth-child(2) {
+            /* border: solid red; */
+            height: 90%;
+            width: 100%;
+            display: flex;
+        }     
+        
+        #card_name{
+            width: 23%;
+            font-size: 12px;
+            font-weight: 700;
+            /* border: solid; */
+            height: 250px;
+            padding: 1%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        #card_details {
+            width: 75%;
+            /* border: solid; */
+            height: 100%;
+            padding: 2%;
+            border-left: 1px solid gray;
+        }
+
+        #card_name > div {
+            height: 19%;
+            /* border: solid; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(230, 230, 230);
+        }
+
+        #card_name > div:hover {
+            background-color: white;
+            cursor:pointer;
+        }
+
+        img{
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            border: 1px solid rgb(185, 185, 185);
+            margin-right: 3%;
+        }
+
+        .card_btn {
+            display: flex;
+            align-items: center;
+            margin-top: 3%;
+            /* border: solid; */
+        }
+
+        #card_details input {
+            width: 3%;
+        }
+
+        .discount {
+            margin: 8%;
+            font-size: large;
+            line-height: 4px;
+            /* text-align: center; */
+            /* border: solid; */
+
+        }
+
+        .discount > p {
+            font-size: 15px;
+        }
+
+        #btn1{
+            background-color: gray;
+            color: white;
+            border-radius: 2px;
+            height: 35px;
+            width: 100px;
+            margin-left: 4%;
+        }  
+        
+        #btn2{
+            background-color: rgb(55, 88, 196);
+            color: white;
+            border-radius: 2px;
+            height: 35px;
+            width: 200px;
+            margin-left: 2%;
+        }
+
+        .footer {
+            margin: 10% 0 0 2%;
+            /* border: solid; */
+            font-size: small;
+        }
+
+        #select_one {
+            color: red;
+            margin-left: 5%;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="header">
+            <div>Bag</div>
+            <div>Delivery</div>
+            <div style="background-color: rgb(236, 236, 236); flex-grow: 2;">Payment</div>
+        </div>
+        <div id="container">
+            <div id="left">
+                <div id="heading_left"><p>Payment Options</p></div>
+                <div style="border-top: 1px solid gray;">
+                    <div id="card_name">
+                        <div class="card1">CREDIT CARD</div>
+                        <div class="card2">DEBIT CARD</div>
+                        <div class="card3">NET BANKING</div>
+                        <div class="card4">WALLET</div>
+                        <div class="card5">CASH ON DELIVERY</div>
+                    </div>
+                    <div id="card_details">
+                        <div id="first">You Will Be Redirected To A Secure Payment Gateway.</div>
+
+                        
+                    <div class="card_btn">
+                        <input type="radio" name="card_select" id="radio1"><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg" alt="logo" id="image1">
+                        <input type="radio" name="card_select" id="radio2"><img id="image2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABAlBMVEX///8AiM0jHyAgHB0AAAAYExQjICHw8PAcFxjW1tZBP0BnZWb7+/sUDhD19fUeGRpycHALAADHx8cAiNFaWFk0MDGOjY94d3juQSPl5eUQBwm/v8Dr6+sAhtE8OTr3qZlQTk/5Ng+trK21tLUpJieAf4De3d6bmpsAgc2Lwefz+v1IRkfOzs7r9/xYVlelpKUAlNX6PyC73PDT6/aYzelvuOHN5/WTkpL97Of2loRXs+nA3vApoOFMqN4Aktmh0uyGxucAjtxVp9keJiYEExPaiXiqSTD60Mb84Nn4saPyc2D7Oxj3cVn6v7H3h3H9VjrvW0CHa2aMPi3jSywAHyH3lIO7EyVTAAAMpElEQVR4nO2aeXvaxhaH5RlJSCAhhFiKBIQAAtuAwQbjLICd3DZpk7Zp7/L9v8o9s2gBxOI0zb1/nPfxE4hGjOanmTnLzCgKgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiDIN2OyvN9cXnpv3k72y64nd6vW5eXmanJ98Pe5XM76G5v3l5ks1hfeBeBdrBfzncL5/crjha3Z/WPGC2CUC6XC8G9v5tezXG+4BK7RW91vyVhIfbxws37M7Meaqvmd5vdp7VfweBFL4DLe3Sdl1+vWdmHrbUYNxYpGaLX83Vr8TBabLQ0wGp/issl9a7vsYrM7iBmDkUMI7X23Jj+P5Y6+i4t3i6jMutot9DIVlquUEPvh/9PWzGeJCDnhEoWLlEDx1Vtl2ZqpTYhuFHLfsd07FBuNYnbJ9b0Xy5utVhsm8t2jLJynum62nrHRnKmwGNqkqtN2428TcIpG2K+WBplFbzeRvvXdfDKZL1aXXqwwUu9t7pes8M2slamweWOQmyr1/2emptlpd7ujUeYbXsnBN4tN5OP63Z34dreRwzN2H5PFJkvhoE/704Jh175508+kUmf/lgoZA/VOmEpvvUyuTRbiP9EAbj2lXODyKUNh4IKrKGlG5Zs2+3zMvDkum0pzNN4vEyJSPcgRNnE+k+q3yrIcfqg5+cGDTem3avIzCYflvuoMlWG4V7QUhrR1l/W7p5YQeCBQSzEyjIoVuLpq/vXWfgXFTjMYmUNVMUd7ZcIb7PRShJiim8fMwjSWT+y60lSJ2z2vRQf8pvUsf5rcPRgpvYrSqBabewqv34iZlhWIKRPv3C4cq7oPYbdO7f1Rsk+vVq/XMsIf8wGuB2dUkNQibbdZUXqdxtBWrJvd2yZ8kHpvMoPpBR+krdNdqExdwsZnAcYq9/m5EulvheFFvW9IOzseqb5t+2olGtBwMw2LivUgrpei342dfjvlfQJHHyX+zqzyu90KvzSuKAHxfXhrewrfClOSLUIaocMpYUxd01Ww01PfyfN2WzXbsdNTsqxSOYDLbY3oOvxpHdneXEGz60XrwaA6AeywGP3GSYfygWu04yoDVgtEUcTOMxdo3ihBpwdfi53dpoluWi13rzMma+/wFN0iVzGcPGuTTXUxyrqU+OlxOPV1lQtqVg2I0CkEsbpWiRQaWt0KKAPaTA35w7K7lawE0esDBnlDJ+J2vw4vpMHnYf1Baewp5NPQe5/ZTfMVKztnkI7bVGMTsJF3bJEFm3CllLqjpNEq+ywWfEKMarvdB6HqVCrUtDBHHa0vLjv9kwrzkKpFtRhsbBTGQQfuUMp7DllMw6fMdsuAJrN/twl04vZkW0t8IkIU57STG+C/QnCvT4lbL4/H3ZGmG5VmpLA2de0KXO51HJ2owQmFPRV6sMRuB6m8lmlYLkDkZj7sLTNstjOJDIWZmcQOQ5s67OFs+o2EoShpxE1MP3SyyzoMhjPxS/x6ow8JZU8qdDp5v8BjynHeIdIgH1SYg2zbFbPVzBvEhheSc8rwZnPj9m7sPRHWMrubFt6ZvoI3kQvrUaqJVkx9oibNg+uEXe+pxIhCxzGBoV3kPzfga0cGzYGqS4N8UGGPEq0TXe1TrQCfw2q5WDTpdLdtk0um8DJbBM99vfvTprQ5crQSbzf0lS8eYqrEjx9nPdgGfwUFLWl0saSJDgeFMDJju6RTqeSQwmLdpv24FqhSZ5+hUyoZ4V7gfXdEoQi7vavTYYbpUGlgGh1HGhjLplo9uiFX0jRm8opwMYn+uw41TKmQGvFjwCj1g2MKG+3ohTKYK2ZD0wryo+5+W6/4KJ1ltjtSeFIgjEjZJuYYKRHfbgzjJvLdjSrlFg8GqZv4kKjDYZATLYmFeq4wjwcV9tz4cazu46Hit1EIbz2ycg8+ccWEqtm0HaUyY0e0teYTP1nnaHYMblPYPEylzjAitOkxhZDHpIIbxaDHstIzFGbb2S2gh6LuAjshbX2QetMQ63BDAjMv5UIs8BIFrhBmZ5KcQ4eLMX9IYcfQCqnhmD8aDF9dfgOFTTV5RtON3mjcUKAivGED2lZP/RAsRpUrNGgqiG20qVizO6AQ8hg/3WnsPR22FVyh99xRulNfWf3Hj7HZrFL5PBaLRfagSlnmAc7L8dNTJrT5pIU704t0zRvHrh1RmEtbaYVNfefm8Fq7GKUXmQ7hmi8FZyi0Xr14/fpFwk8fPnz4iX/7yN6oGJDc+8uegbyR+0ZmWobNRkQTzJKhiJimnpj5ZsU4qnDAFCa1gJ12juwmfKW3+PmXT7cvYz7f3t5+5t8+gQuwo+nHvLwwCGD8bN7kKgVnZ0Q4FBz98xWWXchMklqoQ5zO4UVM6fGzFrEjj5+dOiofX/x6e/vDDr++UkxDWkLeY2JM1sDf8zb2IaOgCZBkMOU8tzhfIXgTnlcktZxWmL1Icypqe/Xb77cvt0V++cjTi5B3O3MG3CKAzRRfeg5JA/kd9b9KIdG3KjqmUEbeT5llIvKeZXcwx3rx6Uta4+1vSmpagKnkvmEwcuxxpNDQtlCtZ49SpnC7Fj97IViwEvlhZplYDPeyO1jy6uPrPxKNn19DCAxBl5h+EOrYrOHlqiFW+3sOpZXSNl+jUHd2agmPbJeIDDg7Q+IZMITexxRCg/7857+i0Xr76RUzMK4wNWOVL94oXXBYvAk9sCzjYpocu/5MhV3wh+XtWg7syHDEKsYms5+u+SrGgXggplH98d9/vvj1B67xC5iafBxyGzzuLIa2dP1gS7NCyDMVRotAgUvcsxfkYCSKxabsFEmsRGVu+SaUfQICXv32ny/QkZ8/8uw+L4o6Dot1mjea9B/jv6Rw6Ivo19zx+CeYiEXfbHPy2DpjmD7YYuvX+vmXP16+fAHBp80tpMJiFqNShE42ZFwOMY39cL7CsZ/OIWKFED/4zzgSIfdesm2NWBE+MIYj2IJMlEN8fP27yO7lQovNigI3ihsHHcfJ2Lo5qDBeueOEMoOxXN2u71VymEe5f5Y5FOXG29GFDJokFiygY2Fq9I4bVQc6oWZH2Q3Lx/v7NRxSaFKRVUrg9YixAKlM5Rl7zfPVkaX7J7nz9nT49xAl8hQo1WC4Uo/bOoVkJ8566xpR913XIYUsO0kdDDCi1Q1IRZKl4TOQW4TeOjUVr+/EwJxwfwFhXTqFmmydGeq6e7Ni5ETB94MNubtN3WZ8s54xhQ4pbHacVM5RVnWpEKaB9gxTo8yjfexE4vJ+IyQlBzHiXdHru/WW9wztPdsNKYOcmT1qFEw3yXrBDMo1UoHVOKaQ5Y3VOJmHB8mVBNMgxk1qmBazd+8T3sjzMt7qia8qLp9mXrSCGh3T8DbrO6br+vH9xpulFBYLhq7u5C7QrfJgTbmqdXpuKuslECenplZ3ekyhFdp67BfADutSIQS8JD1Buxn2eYv4sInX8lbr9Qo+khNDi+i4kNfaQOGMHY9Kn6eBBzvVnQpNSBlqIgu+MfoVLbWBwVxLvBBoddWjCpUuiNJEZzULdj8apcoQaom3Yq2petJ3LORhDKbD87wtHyjjmqhQfKYWkKMF2TRs+VTOn7pN+lGYyhhUKTGqgViuDol9XKHZpsTmJ0hyoWaEJFI4bju6MQrYIyyz5p/2jtd757pSXn6ZOk4UFaYUTrV991ssxStLQ7YPk5p5Vo1d6BeGw2HYjjLJgwoh7dJ1p/MwHFY0rTO2432L0Gf7N6yWeh5Cw1OjFFjvqkhFAMvVbmEqnSyCVXH2LPcQZEfBt05kcwWNGw2yQs33fZudEuseVchcq04MuFmjxnjsxgqLVUPXRS0O0c+J4eZvvIMKlbe7vXiZ7LeBQc84BxWALPFeLY0SZysULfsO39lkf3Iz5rBCpWDDfXw7NbTSu2u9vqPrusiitcIpW8qYPLW81IRrXaQ3DZfp45cwGVMnbwYknnIpzLYjli0Upe37/fJWYY/6lC9CaKocvrmKq5ZSCjuuGikcdFzIKYmjVhpKoPrVeLh0HdthlThasit+guX9jJ9oAwmb97tnZB/XG2mBNqv7dJDe1frO/nnEXIX0NXG1F4YPO29gELb7QLsUudHiNAxTOw7FYRjG1jdXYze32bqICVUlYgYlXku+dH4idb1cvGchzOrqbj+Am9xdrWeQgrxfbG/EDYIgyFhBGMPlI1kpKy6PzzxYwm7OitEsM2AlzzvueT2Zz+eHouwJFB45x44gCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgZ/BfnOFKj5Ac1B0AAAAASUVORK5CYII=" alt="logo">
+                    </div>
+                        
+
+                        <div id="extra" class="discount">EXTRA <span id="catch" style="font-weight: 700;">10% OFF</span> ON PRE-PAID ORDERS <p>on prepaid orders minimum cart value - INR 1000</p></div>
+                        <div class="add"></div>
+                        
+    
+                        <div id="btn_div">
+                            <button id="btn1">CANCEL</button>
+                            <button id="btn2" onclick="check()">MAKE PAYMENT</button>
+                            <p id="select_one"></p>
+                        </div>
+    
+                        <div class="footer">
+                            <p id="footerp1">Note: After Clicking On The "MAKE PAYMENT" Button, You Will Be Directed To A Secure Gateway For Payment. After Completing The Payment Process, You Will Be Redirected Back To Shop4reebok.Com To View Details Of Your Order.</p>
+                            <p>By Placing This Order I Hereby Agree To The Abide By The Terms & Conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>   
+    
+            <div id="right">
+                <div id="heading_right"><p>Order Summary (<span id="right_head"></span> items)</p></div>
+                <div id="right_body">
+                    <div>Merchandise Subtotal <br> (Incl Item Discounts)</div>
+                    <div></div>
+                    <div>Order Discounts</div>
+                    <div></div>
+                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194);">Total</div>
+                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194);"></div>
+                </div>
+                <div id="right_footer">
+                    <div style="display: flex;justify-content: space-between; border-bottom: solid;">
+                        <div style="font-weight: bold;">Billing Address</div>
+                        <div>Edit</div>
+                    </div>
+                    <div id="footer_grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector(".card1").addEventListener("click", display1);
+    document.querySelector(".card2").addEventListener("click", display2);
+    document.querySelector(".card3").addEventListener("click", display3);
+    document.querySelector(".card4").addEventListener("click", display4);
+    document.querySelector(".card5").addEventListener("click", display5);
+
+    // function display1 (){
+
+    //     document.querySelector("#card_details").innerHTML = "";
+
+    //     document.querySelector(".card1").style.backgroundColor = "white";
+    //     document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+
+    //     var div_main = document.createElement("div");
+    //     div_main.setAttribute("id","card_details");
+
+    //     var div1 = document.createElement("div");
+    //     div1.textContent = "You Will Be Redirected To A Secure Payment Gateway.";
+
+    //     var div2 = document.createElement("div");
+    //     div2.setAttribute("class","card_btn");
+
+    //     var input1 = document.createElement("input");
+    //     input1.setAttribute("type","radio");
+    //     var image1 = document.createElement("img");
+    //     image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
+
+    //     var input2 = document.createElement("input");
+    //     input2.setAttribute("type","radio");
+    //     var image2 = document.createElement("img");
+    //     image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
+
+    //     div2.append(input1, image1, input2, image2);
+
+    //     var div3 = document.createElement("div");
+    //     div3.setAttribute("class", "discount");
+
+    //     div3.textContent = "EXTRA 10% OFF ON PRE-PAID ORDERS";
+    //     var dis_para = document.createElement("p");
+    //     dis_para.textContent = "on prepaid orders minimum cart value - INR 1000";
+
+    //     div3.append(dis_para);
+
+    //     var div4 = document.createElement("div");
+    //     div4.setAttribute("class", "btn_div");
+    //     var d4_btn1 = document.createElement("button");
+    //     d4_btn1.textContent = "CANCEL";
+    //     d4_btn1.setAttribute("id", "btn1");
+    //     var d4_btn2 = document.createElement("button");
+    //     d4_btn2.setAttribute("id", "btn2");
+    //     d4_btn2.textContent = "MAKE PAYMENT";
+    //     d4_btn2.setAttribute("onclick", "check");
+    //     var no_select = document.createElement("p");
+    //     no_select.setAttribute("id", "select_one");
+
+    //     div4.append(d4_btn1, d4_btn2, no_select);
+
+    //     var div5 = document.createElement("div");
+    //     div5.setAttribute("class", "footer");
+
+    //     var d5_para1 = document.createElement("p");
+    //     d5_para1.textContent = 'Note: After Clicking On The "MAKE PAYMENT" Button, You Will Be Directed To A Secure Gateway For Payment. After Completing The Payment Process, You Will Be Redirected Back To Shop4reebok.Com To View Details Of Your Order.';
+    //     var d5_para2 = document.createElement("p");
+    //     d5_para2.textContent = 'By Placing This Order I Hereby Agree To The Abide By The Terms & Conditions.';
+
+    //     div5.append(d5_para1, d5_para2);
+
+    //     document.querySelector("#card_details").append(div1, div2, div3, div4, div5);
+    // }
+
+
+
+    // function display2 (){
+
+    //     document.querySelector("#card_details").innerHTML = "";
+
+    //     document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card2").style.backgroundColor = "white";
+    //     document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+
+    //     var div_main = document.createElement("div");
+    //     div_main.setAttribute("id","card_details");
+        
+    //     var div1 = document.createElement("div");
+    //     div1.textContent = "You Will Be Redirected To A Secure Payment Gateway.";
+
+    //     var div2 = document.createElement("div");
+    //     div2.setAttribute("class","card_btn");
+
+    //     var input1 = document.createElement("input");
+    //     input1.setAttribute("type","radio");
+    //     var image1 = document.createElement("img");
+    //     image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
+
+    //     var input2 = document.createElement("input");
+    //     input2.setAttribute("type","radio");
+    //     var image2 = document.createElement("img");
+    //     image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
+
+    //     div2.append(input1, image1, input2, image2);
+
+    //     var div3 = document.createElement("div");
+    //     div3.setAttribute("class", "discount");
+
+    //     div3.textContent = "EXTRA 10% OFF ON PRE-PAID ORDERS";
+    //     var dis_para = document.createElement("p");
+    //     dis_para.textContent = "on prepaid orders minimum cart value - INR 1000";
+
+    //     div3.append(dis_para);
+
+
+    //     var div4 = document.createElement("div");
+    //     div4.setAttribute("class", "btn_div");
+    //     var d4_btn1 = document.createElement("button");
+    //     d4_btn1.textContent = "CANCEL";
+    //     d4_btn1.setAttribute("id", "btn1");
+    //     var d4_btn2 = document.createElement("button");
+    //     d4_btn2.setAttribute("id", "btn2");
+    //     d4_btn2.textContent = "MAKE PAYMENT";
+
+    //     div4.append(d4_btn1, d4_btn2);
+
+    //     var div5 = document.createElement("div");
+    //     div5.setAttribute("class", "footer");
+
+    //     var d5_para1 = document.createElement("p");
+    //     d5_para1.textContent = 'Note: After Clicking On The "MAKE PAYMENT" Button, You Will Be Directed To A Secure Gateway For Payment. After Completing The Payment Process, You Will Be Redirected Back To Shop4reebok.Com To View Details Of Your Order.';
+    //     var d5_para2 = document.createElement("p");
+    //     d5_para2.textContent = 'By Placing This Order I Hereby Agree To The Abide By The Terms & Conditions.';
+
+    //     div5.append(d5_para1, d5_para2);
+
+    //     document.querySelector("#card_details").append(div1, div2, div3, div4, div5);
+    // }
+
+    function display5 (){
+
+        document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card5").style.backgroundColor = "white";
+
+        document.querySelector(".card_btn").innerHTML = "";
+        document.querySelector("#first").style.display = "none";
+        document.querySelector("#extra").style.display = "none";
+        document.querySelector("#footerp1").style.display = "none";
+        // document.querySelector("#card_details").style.display = "none";
+
+
+        document.querySelector(".add").innerHTML = "";
+        var div1 = document.createElement("div");
+        // div1.textContent = "You can pay via:";
+
+        var p1 = document.createElement("p");
+        p1.textContent = "You can pay via:";
+        p1.style.fontWeight = "700"
+
+        var p2 = document.createElement("p");
+        p2.textContent = "Cash/Card/Wallet or UPI";
+
+        var p3 = document.createElement("p");
+        p3.textContent = "at the time of delivery. Kindly ask your";
+
+        var p4 = document.createElement("p");
+        p4.textContent = "delivery executive for these options.";
+
+        document.querySelector("#btn2").textContent = " PLACE ORDER";
+
+        document.querySelector
+
+        div1.append(p1, p2, p3, p4);
+        document.querySelector(".add").append(div1);
+    }
+
+    function display4 (){
+
+        document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card4").style.backgroundColor = "white";
+        document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+
+        document.querySelector(".card_btn").innerHTML = "";
+        document.querySelector("#first").style.display = "block";
+        document.querySelector("#extra").style.display = "block";
+        document.querySelector("#footerp1").style.display = "block";
+        document.querySelector(".add").innerHTML = "";
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "card_btn");
+
+        var input1 = document.createElement("input");
+        input1.setAttribute("type","radio");
+        input1.setAttribute("name", "card_select");
+        input1.setAttribute("id", "radio1");
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", "https://download.logo.wine/logo/Paytm/Paytm-Logo.wine.png");
+
+        var input2 = document.createElement("input");
+        input2.setAttribute("type","radio");
+        input2.setAttribute("name", "card_select");
+        input2.setAttribute("id", "radio2");
+        var image2 = document.createElement("img");
+        image2.setAttribute("src", "https://nuvei.com/wp-content/uploads/2021/06/mobikwik.png");
+
+        var input3 = document.createElement("input");
+        input3.setAttribute("type","radio");
+        input3.setAttribute("name", "card_select");
+        input3.setAttribute("id", "radio3");
+        var image3 = document.createElement("img");
+        image3.setAttribute("src", "https://www.cellular.net.in/wp-content/uploads/2017/09/Quik-Wallet-Customer-Care-Information-1.jpg");
+
+        document.querySelector("#btn2").textContent = " MAKE PAYMENT";
+
+        document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
+    }
+
+
+    function display1() {
+        document.querySelector(".card1").style.backgroundColor = "white";
+        document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+        // window.location.href = "payment.html";
+
+        document.querySelector(".card_btn").innerHTML = "";
+        document.querySelector("#first").style.display = "block";
+        document.querySelector("#extra").style.display = "block";
+        document.querySelector("#footerp1").style.display = "block";
+        document.querySelector(".add").innerHTML = "";
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "card_btn");
+
+        var input1 = document.createElement("input");
+        input1.setAttribute("type","radio");
+        input1.setAttribute("name", "card_select");
+        input1.setAttribute("id", "radio1");
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
+
+        var input2 = document.createElement("input");
+        input2.setAttribute("type","radio");
+        input2.setAttribute("name", "card_select");
+        input2.setAttribute("id", "radio2");
+        var image2 = document.createElement("img");
+        image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
+
+        var input3 = document.createElement("input");
+        input3.setAttribute("type","radio");
+        input3.setAttribute("name", "card_select");
+        input3.setAttribute("id", "radio3");
+        var image3 = document.createElement("img");
+        image3.setAttribute("src", "https://www.cellular.net.in/wp-content/uploads/2017/09/Quik-Wallet-Customer-Care-Information-1.jpg");
+
+        document.querySelector("#btn2").textContent = " MAKE PAYMENT";
+
+        input3.style.display = "none";
+        image3.style.display = "none";
+
+        document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
+    }
+
+    function display2() {
+        document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card2").style.backgroundColor = "white";
+        document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+        // window.location.href = "payment.html";
+
+        document.querySelector(".card_btn").innerHTML = "";
+        document.querySelector("#first").style.display = "block";
+        document.querySelector("#extra").style.display = "block";
+        document.querySelector("#footerp1").style.display = "block";
+        document.querySelector(".add").innerHTML = "";
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "card_btn");
+
+        var input1 = document.createElement("input");
+        input1.setAttribute("type","radio");
+        input1.setAttribute("name", "card_select");
+        input1.setAttribute("id", "radio1");
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
+
+        var input2 = document.createElement("input");
+        input2.setAttribute("type","radio");
+        input2.setAttribute("name", "card_select");
+        input2.setAttribute("id", "radio2");
+        var image2 = document.createElement("img");
+        image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
+
+        var input3 = document.createElement("input");
+        input3.setAttribute("type","radio");
+        input3.setAttribute("name", "card_select");
+        input3.setAttribute("id", "radio3");
+        var image3 = document.createElement("img");
+        image3.setAttribute("src", "https://www.cellular.net.in/wp-content/uploads/2017/09/Quik-Wallet-Customer-Care-Information-1.jpg");
+
+        document.querySelector("#btn2").textContent = " MAKE PAYMENT";
+
+        input3.style.display = "none";
+        image3.style.display = "none";
+
+        document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
+    }
+
+    function display3() {
+        document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card3").style.backgroundColor = "white";
+        document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
+        document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
+        // window.location.href = "payment.html";
+
+        document.querySelector(".card_btn").innerHTML = "";
+        document.querySelector("#first").style.display = "block";
+        document.querySelector("#extra").style.display = "block";
+        document.querySelector("#footerp1").style.display = "block";
+        document.querySelector(".add").innerHTML = "";
+
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "card_btn");
+
+        var input1 = document.createElement("input");
+        input1.setAttribute("type","radio");
+        input1.setAttribute("name", "card_select");
+        input1.setAttribute("id", "radio1");
+        var image1 = document.createElement("img");
+        image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
+
+        var input2 = document.createElement("input");
+        input2.setAttribute("type","radio");
+        input2.setAttribute("name", "card_select");
+        input2.setAttribute("id", "radio2");
+        var image2 = document.createElement("img");
+        image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
+
+        var input3 = document.createElement("input");
+        input3.setAttribute("type","radio");
+        input3.setAttribute("name", "card_select");
+        input3.setAttribute("id", "radio3");
+        var image3 = document.createElement("img");
+        image3.setAttribute("src", "https://www.cellular.net.in/wp-content/uploads/2017/09/Quik-Wallet-Customer-Care-Information-1.jpg");
+
+        document.querySelector("#btn2").textContent = " MAKE PAYMENT";
+
+        input3.style.display = "none";
+        image3.style.display = "none";
+
+        document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
+    }
+
+    // function display4() {
+    //     document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
+    //     document.querySelector(".card4").style.backgroundColor = "white";
+    //     document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)"
+    // }
+
+    function check() {
+        // console.log("yes");
+        if(document.querySelector("#radio1").checked) {
+            alert("Redirecting to payment gateway");
+            window.location.href = "finalPayment.html";
+        }
+        else if(document.getElementById("radio2").checked) {
+            alert("Redirecting to payment gateway");
+            window.location.href = "finalPayment.html";
+        }
+
+        else if(document.getElementById("radio3").checked) {
+            alert("Redirecting to payment gateway");
+            window.location.href = "finalPayment.html";
+        }
+
+        else {
+            alert("Please select payment option");
+            document.querySelector("#select_one").textContent = "Please select any one payment option";
+        }
+    }
+
+</script>
