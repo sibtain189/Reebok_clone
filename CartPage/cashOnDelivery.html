@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Page</title>
+    <style>
+        #container{
+            width: 1300px;
+             height: 1100px; 
+             margin: auto;
+            /* border: 1px solid; */
+            padding: 2%;
+        }
+        #start{
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid blueviolet; */
+            display: flex;
+        }
+        #start>div{
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid green; */
+        }
+        #print{
+            text-align: end;
+            color: grey;
+            
+            
+            text-decoration: underline;
+        }
+        #order_info{
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            display: flex;
+          
+        }
+        #left{
+            width: 60%;
+            height: 100%;
+            /* border: 1px solid; */
+            margin-right: 40px;
+        }
+        #left>p{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        #right{
+            width: 40%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* border: 1px solid rgb(10, 173, 46); */
+        }
+       #right>div{
+           /* border: 1px solid; */
+           padding: 10px;
+           font-size: larger;
+           font-weight: 900;
+       }
+       #first{
+        border: 14px solid black;
+          background-color: black;
+       }
+       table{
+           width: 100%;
+           text-align: center;
+       }
+      #ship{
+          width: 100%;
+          
+          /* height: 40px; */
+          /* border: 1px solid greenyellow; */
+      }
+      #last{
+          border: 14px solid black;
+          background-color: black;
+      }
+      #pay_method{
+          width: 100%;
+          /* border: solid red; */
+          display: grid;
+          display: flex;
+
+      }
+       #pay_method>div{
+          width: 50%;
+          /* border: 1px solid blueviolet; */
+          padding: 0px 10px 0px 10px;
+          background-color: rgb(204, 200, 200);
+     } 
+     #final{
+         width: 100%;
+         height: 26%;
+         /* border: 1px solid green; */
+         display: flex;
+     }
+     #final_pay1{
+
+            width: 60%;
+            height: 100%;
+             /* border: 1px solid green; */
+         
+     }
+        #final_pay2{
+            width: 40%;
+            height: 100%;
+            /* border: 1px solid; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        #final_pay2>div{
+            /* border: 1px solid; */
+        }
+      #bottom>p{
+          text-align: end;
+          font-size: large;
+          letter-spacing: 1px;
+          font-family: sans-serif;
+      }
+      p{
+          font-family:Arial, Helvetica, sans-serif;
+          font-weight: bold;
+          letter-spacing: 1px;
+      }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="start">
+            <div><h1>THANK YOU FOR YOUR ORDER</h1></div>
+            <div id="print">PRINT RECEIPT</div>
+        </div>
+        <div id="order_info">
+            <div id="left">
+                <p>You can use this to track your Order details. We appreciate your business! You will receive email communication at<span></span>to keep you updated on this status of your order</p>
+            </div>
+            <div id="right">
+               <div>Order Number</div>
+               <div></div>
+               <div>Order Date</div>
+               <div></div>
+               <div>Order Total</div>
+               <div></div>
+            </div>
+        </div>
+        <hr>
+        <h1>ORDER SUMMARY FOR...</h1>
+        <hr  id="first">
+        <div id="summ">
+            <table>
+                <thead style="background-color: rgb(230, 221, 221);">
+                   <tr>
+                       <td><h3>Item</h3></td>
+                       <td><h3>Delivery Status</h3></td>
+                       <td><h3>Quantity</h3></td>
+                       <td><h3>Unit Price</h3></td>
+                       <td><h3>Total</h3></td>
+                   </tr> 
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="ship">
+            <div style="background-color: rgb(204, 200, 200);"><h2>Ship To</h2></div>
+            <div style="height: 50px;border: 1px solid;"></div>
+          
+        </div>
+        <hr id="last">
+        <div id="pay_method">
+            <div><h2>Payment Method</h2></div>
+            <div><h2 style="text-align: end;">Cart <Summary></Summary></h2></div>
+        </div>
+        <div id="final">
+            <div  id="final_pay1"><h3>COD</h3></div>
+            <div id="final_pay2">
+                <div><h3>Merchandise Subtotal <span>(Incl Item Discounts)</span></h3></div>
+                <div></div>
+                <div><h3>Order Discounts</h3></div>
+                <div></div>
+                <div><h3>Total Order Cost</h3></div>
+                <div></div>
+            </div>
+          
+        </div>
+        <div id="bottom">
+            <p>(Inclusive of ₹1067.64 tax)</p>
+        </div>
+       <hr style="border: 3px solid black;background-color: black;">
+       <p>Order Confirmation and Status will be sent to <span></span></p>
+    </div>
+</body>
+</html>
