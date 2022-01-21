@@ -9,7 +9,6 @@ function displayItems(mens_data) {
       div.addEventListener("click", function () {
         goToProductPage(index);
       });
-
       // Showing AddTocart button aand size on hovering
       div.addEventListener("mouseover", function () {
         var id = "#rb-box" + index;
