@@ -400,7 +400,7 @@ a{
     padding: 25px 20px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .content .row{
@@ -437,8 +437,9 @@ a{
 .row .mega-links li a{
     /* padding: 0 20px; */
     /* color: azure; */
-    color: gray;
+    color: rgb(79, 88, 66);
     font-size: 13px;
+    font-family: 'Gruppo', cursive;
     /* display: block; */
 }
 
