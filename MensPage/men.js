@@ -152,10 +152,7 @@ function displayItems(mens_data) {
   }
 
   function removeSelectedFilter(index) {
-    console.log("checkedArray" + checkedArray);
-    console.log("index" + index);
     var id = checkedArray[index];
-    console.log(id);
     document.getElementById(id).checked = false;
     checkedArray.splice(index, 1);
     filterDisplay(checkedArray);
