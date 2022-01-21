@@ -163,9 +163,10 @@
 .rb-men-products-banner h1 {
   font-family: NeuePlakTextRegular;
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #40403a;
   margin: 0 10px 0 10%;
+  font-size: 33px;
 }
 .rb-men-sort-banner {
   display: flex;
