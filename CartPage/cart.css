@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@303&display=swap');
+#container{
+    width: 1400px;
+    margin: auto;    
+    display: flex;  
+    justify-content: space-between;
+     font-family: 'Oswald', sans-serif;   
+       
+    /* border: 1px solid red;           */
+}
+#cont{
+   width: 1400px;
+   height: 50px;
+   /* height: 40px; */
+   display: flex;
+   /* border: 1px solid green; */
+   margin: auto;
+   margin-top: 50px;
+
+
+}
+#cont>div{
+   height: 100%;
+   width: 33%;
+   /* border: 1px solid yellow;   */
+   background-color: rgb(226, 221, 221);
+}
+#cart1{
+    /* border: 1px solid black;  */
+   width: 96%;
+   height:180px;
+   margin : 1% 0;
+   display: flex;
+   padding: 2%;
+   justify-content: space-around;
+   border-top: 1px solid rgb(172, 169, 169);
+}
+
+img {
+    /* height: 100%; */
+    width: 100%;
+}
+
+ #div1 {
+    width: 15%;
+    /* border: solid red; */
+    /* display: flex;
+    align-items: center; */
+    /* background-color: greenyellow; */
+}
+#div2{
+    width: 45%;
+    font-size: 12px;
+    line-height: 8px;
+    letter-spacing: 1px;
+    /* border: 1px solid green; */
+
+}
+#div3{
+    width: 7%;
+    padding-top: 2%;
+    /* border: 1px solid black;     */
+}
+#div4{
+   width: 20%;
+   justify-content: space-around;
+   display: flex;
+   /* border: 1px solid blue; */
+   text-align: right;
+}
+
+#div4 button{
+   width: 60%;
+   height: 13%; 
+   margin-top: 15px; 
+   border-radius: 3px;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+   background-color: white;
+}
+#div4>div{
+   width: 25%;
+    /* border: 1px solid pink; */
+}
+#div4>div:nth-child(1){
+   width: 70%;
+}
+
+#div3>input{
+   width: 30%;
+   border: 2px solid;
+}
+#right{
+   width: 22%;
+   /* border: 1px solid yellow;  */
+}
+#right>div{
+   height: 250px;
+   width: 94%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: whitesmoke; 
+   padding: 3%;
+   /* border: 1px solid teal; */
+}
+#left{
+   /* border: 1px solid yellow; */
+   width: 75%;
+}
+#right>div>div{
+   height: 32%;
+   /* border: 1px solid green; */
+   display: flex;
+   justify-content: space-between;
+}
+#right>div>div>div{
+   height: 100%;
+   width: 40%;
+   /* border: 1px solid blue; */
+}
+#right>button{
+   margin-top: 20px;
+   width: 100%;
+   height: 60px;
+   font-size: larger;
+   background-color: crimson;
+   color: white; 
+   outline: none;
+   border: 4px solid rgba(255, 255, 255, 0.837);
+}
+#right>button:hover{
+  background-color:  rgb(228, 48, 84);
+  outline: none;
+   border: 4px solid rgba(255, 255, 255, 0.837);
+}
+#promo{
+width:1400px;
+margin: auto;
+font-size: 12px;
+font-weight: bold;
+
+}
+#promo>input{
+  margin-top: 20px;
+}
+#promo button{
+  width: 20%;
+  height:60px;
+  background-color: crimson;  
+  outline: none;
+  color: white;
+  font-size: larger;
+  margin-top: 50px;
+   border: 5px solid rgba(240, 232, 232, 0.966);
+   box-shadow: rgba(236, 233, 233, 0.911) 0px 3px 8px;
+}
+hr{
+ width: 1400px;
+  border: 1px solid rgb(221, 213, 213);
+  background-color: rgb(201, 192, 192);
+  margin: 10px 0px;
+  margin-top: 40px;
+}
+span{
+  font-weight: normal;
+
+}
+#order{
+  display: flex;
+  border : 1px solid rgb(218, 205, 205);
+
+}
+#order1{
+   display: flex;
+   border : 1px solid rgb(206, 202, 202);
+   
+}
+
+#order1 > div{
+   margin-top: 10px;
+   margin-left: 7px;  
+}
+#order > div{
+margin-top: 10px;
+margin-left: 7px;
+}
+#num{
+  height: 50%;
+  width: 5%;
+  border: 1px solid;
+  text-align: center;
+  margin-top: 8px;
+  background-color: crimson;
+  color: white;
+  border-radius: 50%;
+  outline: crimson;
+  font-size: larger;
+}
+#num1{
+   height: 50%;
+   width: 5%;
+   border: 1px solid;
+   text-align: center;
+   margin-top: 8px;
+   background-color: rgb(124, 118, 120);
+   color: white;
+   border-radius: 50%;
+   outline: rgb(153, 151, 151);
+   font-size: larger;
+}
+#head{
+  /* height: 100%; */
+  /* width: 69%; */
+  width: 1400px;
+  height: 100px;
+  /* border: 1px solid; */
+  margin: auto;
+}
+#head>h1{
+  /* margin: 20px 0px 50px ; */
+  font-family:sans-serif;
+}
+#div2_1{
+   display: flex;
+   font-weight: bold;
+   color: gray;
+   /* justify-content: space-between; */
+}
+#div2_1 p:hover{
+      text-decoration: underline;
+      cursor: pointer;
+      color: rgb(38, 38, 143);
+      
+}
+#name1:hover{
+   text-decoration: underline;
+   cursor: pointer;
+   color: rgb(38, 38, 143);
+}

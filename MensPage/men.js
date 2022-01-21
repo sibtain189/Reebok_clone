@@ -6,8 +6,6 @@ function displayItems(mens_data) {
       var div = document.createElement("div");
       div.setAttribute("class", "rb-card");
       div.setAttribute("id", id);
-      
-
       // Showing AddTocart button aand size on hovering
       div.addEventListener("mouseover", function () {
         var id = "#rb-box" + index;
