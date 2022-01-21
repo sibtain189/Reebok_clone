@@ -147,17 +147,23 @@ function displayItems(mens_data) {
       p.textContent = item;
       div.append(cross, p);
       div.addEventListener("click", function () {
-        removeSelectedFilter(index);
+        removeSelectedFilter(index,checkedArray);
       });
       document.querySelector(".rb-filter-values").append(div);
     });
   }
 
-  function removeSelectedFilter(index) {
+  var arr=['footwear','clothing','accessories','shoes','tshirts','hoodies','pants','bags','classic','sport'];
+  function removeSelectedFilter(index,checkedArray) {
     var id = checkedArray[index];
     document.getElementById(id).checked = false;
     checkedArray.splice(index, 1);
     filterDisplay(checkedArray);
+    arr.map(function(item){
+      if(document.getElementById(item).checked == true){
+        document.getElementById(item).checked =false;
+      }
+    })
   }
 
   function filterByCategory(val) {
