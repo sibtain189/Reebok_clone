@@ -93,7 +93,8 @@
 .rb-filter-cat-gender,
 .rb-filter-cat-category,
 .rb-filter-cat-pT,
-.rb-filter-cat-brand {
+.rb-filter-cat-brand,
+.rb-filter-cat-discount {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -105,7 +106,8 @@
 #rb-filter-dropdown-gender,
 #rb-filter-dropdown-category,
 #rb-filter-dropdown-pT,
-#rb-filter-dropdown-brand {
+#rb-filter-dropdown-brand,
+#rb-filter-dropdown-discount {
   width: 80%;
   margin-bottom: 30px;
 }
