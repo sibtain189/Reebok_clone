@@ -55,7 +55,8 @@ function displayItems(mens_data) {
       details_div.setAttribute("class", "rb-product-details");
       details_div.append(name, category, price_span, size);
       details_div.addEventListener("click", function () {
-        goToProductPage(index);
+        goToProductPage(index,item);
+
       });
 
       var cart_div = document.createElement("div");
@@ -119,14 +120,14 @@ function displayItems(mens_data) {
     displayItems(mens_data);
   }
 
-  function goToProductPage(index) {
+  function goToProductPage(index,item) {
     console.log("product page");
     console.log(index);
     console.log(mens_data[index]);
     alert("going to product page..configure page")
 
     //Go to Product Page link
-    window.location.href = "#";
+    window.location.href = "http://127.0.0.1:5501/ProductPage/product.html";
   }
 
   function filterDisplay(checkedArray, val) {

@@ -30,19 +30,23 @@
 </html>
 
 <script>
-    var data = {
-        category:"footwear",
-    productType:"shoe",
-    image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d7ebfd560623409387f0ad25012a62ec_9366/classic-leather-legacy-az-shoes.jpg",
-    name:"Classic Leather Legacy AZ Shoes",
-    price:1600,
-    strikeOffPrice:2000,
-    size:[6,7,8,9,10],
-    brand:"classic",
-    discount:"20",
-    color:"white"
-    }
+    // var data = {
+    //     category:"footwear",
+    // productType:"shoe",
+    // image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d7ebfd560623409387f0ad25012a62ec_9366/classic-leather-legacy-az-shoes.jpg",
+    // name:"Classic Leather Legacy AZ Shoes",
+    // price:1600,
+    // strikeOffPrice:2000,
+    // size:[6,7,8,9,10],
+    // brand:"classic",
+    // discount:"20",
+    // color:"white"
+    // }
 
+    var data = JSON.parse(localStorage.getItem("reebok-men-data"))
+    console.log(data)
+
+data = data[0];
     var mainDiv = document.createElement("div")
     mainDiv.setAttribute("class","mainDiv")
 
