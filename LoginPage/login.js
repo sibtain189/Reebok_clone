@@ -57,8 +57,10 @@ function leftSign(event) {
     user_login.map(function(item) {
       if(item.email == a && item.pass == b) {
         alert("login Succesfull");
-        return count++;
+         count++;
+         window.location.href="http://127.0.0.1:5501/HomePage/home.html"
       }
+
     });
 
     if(count == 0) {
