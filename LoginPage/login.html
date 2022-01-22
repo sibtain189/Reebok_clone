@@ -13,75 +13,82 @@
 </head>
 
 <body>
-    <p id="sign_in_heading">SIGN IN</p>
-    <div id="container">
-        <div id="left">
-            <div id="formdiv_left">
-                <form class="form">
-                    <p class="container_heading">REGISTERED MEMBERS</p>
-                    <p class="heading">If you've created an account with us, please enter your email address and password.
-                    </p>
-
-                    <input type="text" id="left_email" placeholder="Enter your Email">
-                    <p class="wrong_left_mail"></p>
-
-                    <input type="text" id="left_pass" placeholder="Enter your password">
-                    <p class="wrong_left_pass"></p>
-
-                    <input type="submit" id="left_sign_in" value="Sign In   >">
-                    
-                </form>
-                <hr>
-
-                <div id="footer">
-                    <a href="" title="Recover your password" id="pass">Forgot your password?</a>
-
-                    <div>
-                        <input type="checkbox" name="checkbox" /><span style="margin-left: 1.5%;">Continue as a Guest User</span>
+    <div id="container1">
+        <div>
+            <p id="sign_in_heading">SIGN IN</p>
+        </div>
+        <div id="container">
+            <div id="left">
+                <div id="formdiv_left">
+                    <form class="form">
+                        <p class="container_heading">REGISTERED MEMBERS</p>
+                        <p class="heading">If you've created an account with us, please enter your email address and password.
+                        </p>
+    
+                        <input type="text" id="left_email" placeholder="Enter your Email">
+                        <p class="wrong_left_mail"></p>
+    
+                        <input type="password" id="left_pass" placeholder="Enter your password">
+                        <p class="wrong_left_pass"></p>
+    
+                        <input type="submit" id="left_sign_in" value="Sign In  >">
+                        <p id="wrongDetails"></p>
+                        
+                    </form>
+                    <hr>
+    
+                    <div id="footer">
+                        <a href="" title="Recover your password" id="pass">Forgot your password?</a>
+    
+                        <div>
+                            <input type="checkbox" name="checkbox" /><span style="margin-left: 1.5%;">Continue as a Guest User</span>
+                        </div>
+                        
                     </div>
+                </div>
+            </div>
+            <hr>
+            <div id="middle">
+                <div id="formdiv_middle">
+                    <form class="form" id="middle_form">
+                        <p class="container_heading">NEW CUSTOMERS</p>
+                        <p class="heading">If you don't have an account with us, or are just unsure then enter your information below.</p>
+    
+                        <input type="text" id="first_name" placeholder="First Name">
+                        <p id="wrong_middle_first_name" ></p>
+                        <input type="text" id="last_name" placeholder="Last Name">
+                        <p id="wrong_middle_last_name" ></p>
+    
+                        <input type="text" id="middle_email" placeholder="Email">
+                        <p id="wrong_middle_email" ></p>
+    
+                        <input type="password" id="middle_pass" placeholder="Password">
+                        <p style="font-size: 12px; color: rgb(158, 158, 158); margin-bottom: 12px;">Password should have at least a minimum of one letter, one number and is at least 8 characters long</p>
+                        <p id="wrong_middle_pass1" ></p>
+    
+                        <input type="password" id="retype_middle_pass" placeholder="Re-type Password">
+                        <p id="wrong_middle_pass2" ></p>
+    
+                        <div>
+                            <input type="radio" name="gender" id="gen1" style="width: 4%;">
+                            <span style="margin-right: 3%;">Male</span>
+                            <span><input type="radio" name="gender" id="gen2" style="width: 4%;">Female</span>
+                            <p id="wrong_gender"></p>
+                        </div>
+    
+                        <input type="submit" id="middle_sign_in" value="Sign In  >" style="margin-top: 10%;">
+                    </form>
                     
                 </div>
             </div>
-        </div>
-        <hr>
-        <div id="middle">
-            <div id="formdiv_middle">
-                <form class="form" id="middle_form">
-                    <p class="container_heading">NEW CUSTOMERS</p>
-                    <p class="heading">If you don't have an account with us, or are just unsure then enter your information below.</p>
-
-                    <input type="text" id="first_name" placeholder="First Name">
-                    <p id="wrong_middle_first_name" ></p>
-                    <input type="text" id="last_name" placeholder="Last Name">
-                    <p id="wrong_middle_last_name" ></p>
-
-                    <input type="text" id="middle_email" placeholder="Email">
-                    <p id="wrong_middle_email" ></p>
-
-                    <input type="text" id="middle_pass" placeholder="Password">
-                    <p style="font-size: 12px; color: rgb(158, 158, 158); margin-bottom: 12px;">Password should have at least a minimum of one letter, one number and is at least 8 characters long</p>
-                    <p id="wrong_middle_pass" ></p>
-
-                    <input type="text" id="retype_middle_pass" placeholder="Re-type Password">
-                    <p id="wrong_middle_pass" ></p>
-
-                    <div>
-                        <input type="radio" name="gender" style="width: 4%;">
-                        <span style="margin-right: 3%;">Male</span>
-                        <span><input type="radio" name="gender" style="width: 4%;">Female</span>
-                    </div>
-
-                    <input type="submit" id="middle_sign_in" value="Sign In    >" style="margin-top: 15%;">
-                </form>
-                
+            <hr>
+            <div id="right">
+                <p class="container_heading">USE YOUR SOCIAL NETWORK</p>
+                <p class="heading" style="margin-bottom: 7%;">Sign in using your existing Facebook information</p>
+                <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="" style="width: 13%;">
             </div>
         </div>
-        <hr>
-        <div id="right">
-            <p class="container_heading">USE YOUR SOCIAL NETWORK</p>
-            <p class="heading" style="margin-bottom: 7%;">Sign in using your existing Facebook information</p>
-            <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="" style="width: 15%;">
-        </div>
+    </div>
 </body>
 
 </html>
