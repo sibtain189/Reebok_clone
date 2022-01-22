@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reebok-Order Status/Tracking</title>
+    <link rel="stylesheet" href="orderStatusPage.css">
+    <!-- <style>
+        #container{
+            width: 1200px;
+            height: 600px;
+            margin: auto;
+            margin-top: 40px;
+            /* border: 4px solid ; */
+        }
+        #track{
+            width: 100%;
+            height: 20%;
+            /* border: 1px solid red;   */
+        }
+        select{
+            width: 20%;
+            height: 7%;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.45) 2.4px 2.4px 3.2px;
+            border: 2px solid grey;
+            outline: none;
+        }
+        table{
+            width: 100%;
+            height: 60%;
+            margin-top: 20px;
+            /* border: 3px solid blue; */
+        }
+        td{
+            font-weight: bold;
+        }
+        button{
+            width: 6%;
+            height: 5%;
+            background-color:rgb(58, 56, 56);
+            color: white;
+            font-size: small;
+            font-weight: bold;
+            border-radius: 5px;
+            outline: none;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="container">
+        <div id="track">
+            <p style="margin-top: 30px;font-weight: bolder;font-size: xx-large;color:rgb(102,102,102);font-family: sans-serif;">Order Status/Tracking</p>
+        </div>
+        <select name="" id="box"> 
+            <option value="">RECENT ORDER</option>
+            <option value="">PAST 1 MONTH</option>
+            <option value="">PAST 6 MONTHS</option>
+        </select>
+        <table>
+            <thead>
+                <tr style="background-color: rgb(228,228,228);">
+                    <td>Order Date</td>
+                    <td>Order No.</td>
+                    <td>Destination</td>
+                    <td>Order Status</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="window.location.href='accountpage.html'"><<<span>Back<span/></button>
+    </div>
+</body>
+</html>
+<script src="orderStatusPage.js"></script>
+    
+   
