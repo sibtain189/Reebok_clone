@@ -374,6 +374,16 @@ a{
     font-size: 17px;
 }
 
+#scroll-bar ::-webkit-scrollbar {
+    width: 1px;
+  }
+  #scroll-bar ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+  #scroll-bar ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
 /* paste here z-index--------------------------------------------- */
 
 .nav-links li:hover .mega-box{

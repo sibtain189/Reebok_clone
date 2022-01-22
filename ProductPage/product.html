@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="productStyle.css">
+    <script src="https://kit.fontawesome.com/d8f09ee9e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">EXTRA 10% OFF ON PREPPAID ORDERS MINIMUMCART VALUE - INR 1000.</div>
+    <div class="flex-nav">
+        <p>HOME</p>
+        <p>MEN</p>
+        <p>FOOTWARE</p>
+        <p>RUNNING</p>
+        <p>SPEED-O-NICK</p>
+    </div>
+    <div class="container"></div>
+    <div class="flex-right">
+        <div class="blank"></div>
+        <div class="cart" onclick="goToCart()">
+            <p>Add To Cart</p>
+            <i class="fas fa-long-arrow-alt-right arrow"></i>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // var data = {
+    //     category:"footwear",
+    // productType:"shoe",
+    // image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d7ebfd560623409387f0ad25012a62ec_9366/classic-leather-legacy-az-shoes.jpg",
+    // name:"Classic Leather Legacy AZ Shoes",
+    // price:1600,
+    // strikeOffPrice:2000,
+    // size:[6,7,8,9,10],
+    // brand:"classic",
+    // discount:"20",
+    // color:"white"
+    // }
+
+    var data=JSON.parse(localStorage.getItem("reebok-product-data"))||[]
+    console.log(data)
+
+// data = data[0];
+    var mainDiv = document.createElement("div")
+    mainDiv.setAttribute("class","mainDiv")
+
+    var leftMostDiv = document.createElement("div")
+    leftMostDiv.setAttribute("class","leftMostDiv")
+
+    var leftImg1 = document.createElement("img")
+    leftImg1.setAttribute("src","https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d7ebfd560623409387f0ad25012a62ec_9366/classic-leather-legacy-az-shoes.jpg")
+    leftImg1.setAttribute("class","leftImg1")
+
+    var leftImg2 = document.createElement("img")
+    leftImg2.setAttribute("src","https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e18e542c56aa4a338008ad2d003435bc_9366/classic-leather-legacy-az-shoes.jpg")
+    leftImg2.setAttribute("class","leftImg1")
+
+    var leftImg3 = document.createElement("img")
+    leftImg3.setAttribute("src","https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/976bcf06e0e14d39a5d1ad2d002f130b_9366/victory-g-shoes.jpg")
+    leftImg3.setAttribute("class","leftImg1")
+
+    var leftImg4 = document.createElement("img")
+    leftImg4.setAttribute("src","https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/38a895e8810a461c888aad42003562c5_9366/experiment-4-fury-trail-by-pyer-moss.jpg")
+    leftImg4.setAttribute("class","leftImg1")
+
+    var leftImg5 = document.createElement("img")
+    leftImg5.setAttribute("src","https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/c57e6c0360334799ad73aa9201897b1d_9366/club-c-85-vintage-shoes.jpg")
+    leftImg5.setAttribute("class","leftImg1")
+
+
+    leftMostDiv.append(leftImg1,leftImg2,leftImg3,leftImg4,leftImg5)
+
+    var leftDiv = document.createElement("div")
+    leftDiv.setAttribute("class","leftDiv")
+
+    var itemImage = document.createElement("img")
+    itemImage.setAttribute("src", data.image)
+
+    leftDiv.append(itemImage)
+
+    var rightDiv = document.createElement("div")
+    rightDiv.setAttribute("class","rightDiv")
+
+    var productIden=document.createElement("p")
+    productIden.textContent = "Product Identifier : EW5163"
+    productIden.setAttribute("class","productIden")
+
+    var productName= document.createElement("p")
+    productName.textContent = data.name
+    productName.setAttribute("class","productName")
+
+    var priceDiv = document.createElement("div")
+    priceDiv.setAttribute("class","priceDiv")
+
+    var strikePrice = document.createElement("p")
+    strikePrice.textContent = "$"+data.strikeOffPrice
+    strikePrice.setAttribute("class","strikePrice")
+
+    var originalPrice = document.createElement("p")
+    originalPrice.textContent = "$"+data.price
+    originalPrice.setAttribute("class","originalPrice")
+
+    var discountPer = document.createElement("p")
+    discountPer.textContent= "-"+data.discount+"% OFF"
+    discountPer.setAttribute("class","discountPer")
+
+    priceDiv.append(strikePrice,originalPrice,discountPer)
+
+    var tax = document.createElement("p")
+    tax.textContent="(Inclusive Of All Taxes)"
+    tax.setAttribute("class","tax")
+
+    var availColor = document.createElement("p")
+    availColor.textContent = "AVAILABLE COLORS" 
+    availColor.setAttribute("class","availColor")
+
+    var colorDiv = document.createElement("div")
+    colorDiv.setAttribute("class","colorDiv")
+    // colorDiv.setAttribute("class","colorDiv")
+
+    var colorImg1 = document.createElement("img")
+    colorImg1.setAttribute("src","https://media.istockphoto.com/photos/sneakers-with-clipping-path-picture-id175537625?b=1&k=20&m=175537625&s=170667a&w=0&h=3ayXmgvGE3zsRn2v4jJffLzyk3iyDsyqbTlrSVJxmu4=")
+    colorImg1.setAttribute("class","colorImg")
+
+    var colorImg2 = document.createElement("img");
+    colorImg2.setAttribute("src","https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=")
+    colorImg2.setAttribute("class","colorImg")
+
+    colorDiv.append(colorImg1,colorImg2)
+
+    var inStock = document.createElement("p")
+    inStock.textContent="IN STOCK"
+    inStock.setAttribute("class","inStock")
+
+    var selectSize = document.createElement("p")
+    selectSize.textContent="SELECT SIZE (UK)"
+    selectSize.setAttribute("class","selectSize")
+
+    var sizeChart=document.createElement("p")
+    sizeChart.textContent="Size Chart"
+    sizeChart.setAttribute("class","sizeChart")
+
+    var size0 = document.createElement("option")
+    size0.textContent="SELECT SIZE"
+    var size1 = document.createElement("option")
+    size1.textContent="6"
+    var size2 = document.createElement("option")
+    size2.textContent="7"
+    var size3 = document.createElement("option")
+    size3.textContent="8"
+    var size4 = document.createElement("option")
+    size4.textContent="9"
+    var size5 = document.createElement("option")
+    size5.textContent="10"
+    var size6 = document.createElement("option")
+    size6.textContent="11"
+
+    var sizeOfEle = document.createElement("select")
+    sizeOfEle.setAttribute("class","sizeOfEle")
+    
+
+    sizeOfEle.append(size0,size1,size2,size3,size4,size5,size6)
+
+    rightDiv.append(productIden, productName,priceDiv,tax,availColor,colorDiv,inStock,selectSize,sizeChart,sizeOfEle)
+    
+    mainDiv.append(leftMostDiv,leftDiv,rightDiv)
+
+    document.querySelector(".container").append(mainDiv)
+
+
+    function goToCart(){
+        if(document.querySelector(".sizeOfEle").value=="SELECT SIZE"){
+            alert("Please Select Size")
+            
+        }else{
+            window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
+        }
+        console.log(document.querySelector(".sizeOfEle").value)
+    }
+
+
+</script>

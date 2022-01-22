@@ -1,20 +1,18 @@
-var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-// console.log(cartData)
 
+var data =JSON.parse(localStorage.getItem("reebok-product-data"));
+var cartData = [];
+cartData.push(data)
+// console.log(cartData)
 if(cartData.length <= 0)
 {
     document.querySelector("#left").style.display="none";
     document.querySelector("#right").style.display="none";
     document.querySelector("#promo1").style.display="none";
     document.getElementById("start1").textContent = "There are no products in your Shopping Cart.";
-
 }
 else{
     printData(cartData)
 }
-
-
-
 
 function printData(cartData){
     document.querySelector("#left").innerHTML="";
@@ -142,3 +140,15 @@ function abc(){
     document.querySelector("#total").textContent = x*0.9;
 }
 
+
+function checkLogin(){
+
+    var check = localStorage.getItem("login-count")
+    // console.log(chack)
+
+    if(check==1){
+        window.location.href="http://127.0.0.1:5501/LoginPage/delivery.html"
+    }else{
+        window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+    }
+}

@@ -1,4 +1,3 @@
-var mens_data = JSON.parse(localStorage.getItem("reebok-men-data")) || [];
 function displayItems(mens_data) {
     document.getElementById("rb-men-display").innerHTML = "";
     console.log(mens_data);
@@ -7,9 +6,6 @@ function displayItems(mens_data) {
       var div = document.createElement("div");
       div.setAttribute("class", "rb-card");
       div.setAttribute("id", id);
-      div.addEventListener("click", function () {
-        goToProductPage(item);
-      });
       // Showing AddTocart button aand size on hovering
       div.addEventListener("mouseover", function () {
         var id = "#rb-box" + index;
@@ -58,9 +54,6 @@ function displayItems(mens_data) {
       details_div.setAttribute("class", "rb-product-details");
       details_div.append(name, category, price_span, size);
       details_div.addEventListener("click", function () {
-
-      
-
         goToProductPage(item);
       });
 
@@ -125,10 +118,7 @@ function displayItems(mens_data) {
     displayItems(mens_data);
   }
 
-
   function goToProductPage(item) {
-    // var productData={};
-    // var productData=JSON.parse(localStorage.getItem("reebok-product-data"))||[];
     alert("going to product page..configure page");
     // productData.push(item);
     localStorage.setItem("reebok-product-data",JSON.stringify(item));
@@ -155,24 +145,17 @@ function displayItems(mens_data) {
       p.textContent = item;
       div.append(cross, p);
       div.addEventListener("click", function () {
-        removeSelectedFilter(index,checkedArray);
-        displayItems(mens_data);
+        removeSelectedFilter(index);
       });
       document.querySelector(".rb-filter-values").append(div);
     });
   }
 
-  var arr=['footwear','clothing','accessories','shoes','tshirts','hoodies','pants','bags','classic','sport'];
-  function removeSelectedFilter(index,checkedArray) {
+  function removeSelectedFilter(index) {
     var id = checkedArray[index];
     document.getElementById(id).checked = false;
     checkedArray.splice(index, 1);
     filterDisplay(checkedArray);
-    arr.map(function(item){
-      if(document.getElementById(item).checked == true){
-        document.getElementById(item).checked =false;
-      }
-    })
   }
 
   function filterByCategory(val) {

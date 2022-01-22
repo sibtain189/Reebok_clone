@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@200&family=News+Cycle&family=Roboto:wght@300&family=Rubik&family=Spline+Sans:wght@400;500&display=swap');
+
+        body {
+            background-color: rgb(236,236,236);
+            font-family: 'Montserrat', sans-serif;
+            font-size: small;
+        }
+
+        #container {
+            background-color: white;
+            width: 700px;
+            height: 550px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            border-left: 5px solid rgb(82, 143, 255);
+        }
+
+        #left {
+            width: 45%;
+            height: 85%;
+            padding: 4%;
+            /* border: solid; */
+            border-right : 5px solid rgb(82, 143, 255);
+        }
+
+        #right {
+            width: 55%;
+            height: 80%;
+            padding: 4%;
+            /* border: solid; */
+            color: gray;
+        }
+
+        .left_1 {
+            display: flex;
+            width: 100%;
+            height: 7%;
+            /* margin-bottom: 8%; */
+            /* border: solid blue; */
+            justify-content: space-between;
+        }
+
+        .left_1 > div{
+            width: 30%;
+            height: 100%;
+            /* border: solid; */
+            display: flex;
+            align-items: center;
+        }
+
+        .left2 {
+            /* height: 50%; */
+            padding-top: 12%;
+            /* margin-top: 6%; */
+            /* border: solid; */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgb(211, 211, 211);
+            border-radius: 6px;
+        }
+
+        #right1 {
+            font-size: 10px;
+            display: flex;
+            height: 12%;
+            font-weight: 700;
+        }
+
+        #right1 select {
+            font-size: x-small;
+            width: 75%;
+            height: 40%;
+        }
+
+        #right1 > div {
+            width: 50%;
+            height: 100%;
+            /* border: solid; */
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 7%;
+            margin-bottom: 2%;
+        }
+
+        #flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #flex div {
+            width: 47%;
+            /* border: solid; */
+        }
+
+
+        form input{
+            width: 95%;
+            height: 30px;
+            /* margin-bottom: 3%; */
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 3px;
+            outline: none;
+            padding-left: 3%;
+        }
+
+        .material-icons{
+            font-size: 13px;
+        }
+
+        /* #check[type="checkbox"]::before {
+            border: ;
+        }  */
+
+        form p {
+            font-size: x-small;
+            color: red;
+            font-weight: 700;
+        }
+
+        #footerImage {
+            width: 700px;
+            margin: auto;
+            margin-top: 2%;
+            height: 35px;
+        }
+
+        #back:hover{
+            cursor: pointer;
+        }
+     </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div class="left_1">
+                <div id="back" onclick="window.location.href='payment.html'"><i class="material-icons">arrow_back</i>Back</div>
+                <div><img src="https://preview.thenewsmarket.com/Previews/RBOK/StillAssets/1920x1080/551064.png" alt=""></div>
+            </div>
+            <div class="left2">
+                <p style="font-weight: 1000; font-size: x-large;">Enter new card</p>
+                <p style="font-weight: 700;">Total Payable Amount ₹ <span id="rupee" style="font-weight: 700;font-size: 17px;"></span></p>
+                <p style="font-size: x-small;">Transaction Id: 698494080257</p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="right1">
+                <div>CARDS (CREDIT/DEBIT)</div>
+                <div>
+                    <i class="material-icons">g_translate</i>
+                    <select data-placeholder="Choose a Language...">
+                        <option value="">Choose a Language...</option>
+                        <option value="AF">Afrikaans</option>
+                        <option value="SQ">Albanian</option>
+                        <option value="AR">Arabic</option>
+                        <option value="HY">Armenian</option>
+                        <option value="EU">Basque</option>
+                        <option value="BN">Bengali</option>
+                        <option value="BG">Bulgarian</option>
+                        <option value="CA">Catalan</option>
+                        <option value="KM">Cambodian</option>
+                        <option value="ZH">Chinese (Mandarin)</option>
+                        <option value="HR">Croatian</option>
+                        <option value="CS">Czech</option>
+                        <option value="DA">Danish</option>
+                        <option value="NL">Dutch</option>
+                        <option value="EN">English</option>
+                        <option value="ET">Estonian</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finnish</option>
+                        <option value="FR">French</option>
+                        <option value="KA">Georgian</option>
+                        <option value="DE">German</option>
+                        <option value="EL">Greek</option>
+                        <option value="GU">Gujarati</option>
+                        <option value="HE">Hebrew</option>
+                        <option value="HI">Hindi</option>
+                        <option value="HU">Hungarian</option>
+                        <option value="IS">Icelandic</option>
+                        <option value="ID">Indonesian</option>
+                        <option value="GA">Irish</option>
+                        <option value="IT">Italian</option>
+                        <option value="JA">Japanese</option>
+                        <option value="JW">Javanese</option>
+                        <option value="KO">Korean</option>
+                        <option value="LA">Latin</option>
+                        <option value="LV">Latvian</option>
+                        <option value="LT">Lithuanian</option>
+                        <option value="MK">Macedonian</option>
+                        <option value="MS">Malay</option>
+                        <option value="ML">Malayalam</option>
+                        <option value="MT">Maltese</option>
+                        <option value="MI">Maori</option>
+                        <option value="MR">Marathi</option>
+                        <option value="MN">Mongolian</option>
+                        <option value="NE">Nepali</option>
+                        <option value="NO">Norwegian</option>
+                        <option value="FA">Persian</option>
+                        <option value="PL">Polish</option>
+                        <option value="PT">Portuguese</option>
+                        <option value="PA">Punjabi</option>
+                        <option value="QU">Quechua</option>
+                        <option value="RO">Romanian</option>
+                        <option value="RU">Russian</option>
+                        <option value="SM">Samoan</option>
+                        <option value="SR">Serbian</option>
+                        <option value="SK">Slovak</option>
+                        <option value="SL">Slovenian</option>
+                        <option value="ES">Spanish</option>
+                        <option value="SW">Swahili</option>
+                        <option value="SV">Swedish </option>
+                        <option value="TA">Tamil</option>
+                        <option value="TT">Tatar</option>
+                        <option value="TE">Telugu</option>
+                        <option value="TH">Thai</option>
+                        <option value="BO">Tibetan</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TR">Turkish</option>
+                        <option value="UK">Ukrainian</option>
+                        <option value="UR">Urdu</option>
+                        <option value="UZ">Uzbek</option>
+                        <option value="VI">Vietnamese</option>
+                        <option value="CY">Welsh</option>
+                        <option value="XH">Xhosa</option>
+                    </select>
+                </div>
+            </div>
+            <div id="right2">
+                <form>
+                    <label for="newCard">New Card</label>
+                    <input id="newCard" type="text" placeholder="Enter Card Number(ex:12345)">
+                    <p id="wrong_card"></p>
+
+                    <div id="flex">
+                        <div>
+                            <label for="expiry">Expiry</label>
+                            <input type="text" placeholder="MM/YY(ex:12/34)" id="expiry">
+                            <p id="wrong_exp_date"></p>
+                        </div>
+                        
+                        <div>
+                            <label for="cvv">CVV <i class="material-icons">help</i></label>
+                            <input type="text" placeholder="Enter CVV(ex:123)" id="cvv">
+                            <p id="wrong_cvv"></p>
+                        </div>
+                        
+                    </div>
+
+                    <label for="name">Name on Card</label>
+                    <input type="text" id="name" placeholder="Enter name as on card(ex:xyz)">
+                    <p id="wrong_name"></p>
+
+                    <div id="check" style="margin-top: 3%;">
+                        <input type="checkbox" style="width: 12px; height: 12px;">
+                        Save this option securely for faster payment
+                        <p id="wrong_check"></p>
+                    </div>
+                    <input type="submit" value="PROCEED" style="background-color: rgb(82, 143, 255); height: 40px;margin-top: 10%;color:  rgb(114, 114, 114); letter-spacing: 1px; border-radius: 5px;font-size: 14px; width: 100%;">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footerImage" style="text-align: center;">
+        <img src="https://kaurfashions.com/wp-content/uploads/2020/07/payment-footer-2.png" alt="logo">
+        <p style="font-size: 12px; color: rgb(26, 26, 26);">By proceeding, you understand that your information will be processed as per PayU's <span style="font-weight: bolder;">Privacy Policy</span></p>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+    var card_data = [
+        {card_num: "12345", exp: "12/34", cvv: "123", name: "xyz"}
+    ]
+
+    // localStorage.setItem("cardData", JSON.stringify(card_data));
+
+
+    document.querySelector("form").addEventListener("submit", wrong);
+
+    function wrong(event) {
+
+        event.preventDefault();
+        
+        document.querySelector("#wrong_card").textContent = "";
+        document.querySelector("#wrong_exp_date").textContent = "";
+        document.querySelector("#wrong_cvv").textContent = "";
+        document.querySelector("#wrong_name").textContent = "";
+        document.querySelector("#wrong_check").textContent = "";
+
+        var checkbox = document.querySelector("input[type=checkbox]");
+
+        if (checkbox.checked) {
+            // console.log("Checkbox is checked..");
+            
+            var card = document.querySelector("#newCard").value;
+
+            if(card == "") {
+                document.querySelector("#wrong_card").textContent = "Card Number is 12345";
+            }
+
+            var expiry = document.querySelector("#expiry").value;
+
+            if(expiry == "") {
+                document.querySelector("#wrong_exp_date").textContent = "Enter valid expiry date 12/34";
+            }
+
+            var cvv = document.querySelector("#cvv").value;
+
+            if(cvv == "") {
+                document.querySelector("#wrong_cvv").textContent = "Enter valid cvv 123";
+            }
+
+            var name = document.querySelector("#name").value;
+
+            if(name == "") {
+                document.querySelector("#wrong_name").textContent = "Please enter xyz";
+            }      
+            
+            if(card != "" && expiry != "" && cvv != "" && name != "") {
+
+                card_data.map(function (items) {
+                    if(card == items.card_num && expiry == items.exp && cvv == items.cvv && name == items.name) {
+                        alert("OTP is send to your registered mobile number");
+                        window.location.href = "otp.html";
+                    }
+                    else {
+                        document.querySelector("#wrong_check").textContent = "Sorry!! wrong credentials";
+                    }
+                });               
+            }
+        } 
+        else {
+            // console.log("Checkbox is not checked..");
+            alert("please tick the checkbox");
+            document.querySelector("#wrong_check").textContent = "please tick the checkbox";
+        }
+    }
+
+
+
+    var total = JSON.parse(localStorage.getItem("finalTotal"));
+    document.getElementById("rupee").textContent = total;
+
+</script>

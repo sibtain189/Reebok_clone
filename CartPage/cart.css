@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@303&display=swap');
 #container{
+
     width: 70em;
     margin: auto;    
     display: flex;  
@@ -9,6 +10,7 @@
     /* border: 1px solid red;           */
 }
 #cont{
+
    width: 70em;
    height: 35px;
    /* height: 40px; */
@@ -21,16 +23,19 @@
 }
 #cont>div{
    height: 100%;
+
    width: 33.3%;
    font-size: 15px;
    display: flex;
    align-items: center;
+
    /* border: 1px solid yellow;   */
    background-color: rgb(226, 221, 221);
 }
 #cart1{
     /* border: 1px solid black;  */
    width: 96%;
+
    height:120px;
    margin : 1% 0;
    margin-top: 10px;
@@ -100,7 +105,9 @@ img {
    /* border: 1px solid yellow;  */
 }
 #right>div{
+
    height: 170px;
+
    width: 94%;
    display: flex;
    font-size: 15px;
@@ -142,6 +149,7 @@ img {
    border: 4px solid rgba(255, 255, 255, 0.837);
 }
 #promo{
+
 width:90em;
 margin: auto;
 font-size: 12px;
@@ -149,9 +157,9 @@ font-weight: bold;
 /* border: 1px solid; */
 
 }
-/* #promo>input{
+#promo>input{
   margin-top: 20px;
-} */
+}
 #promo button{
   width: 20%;
   height:60px;
@@ -164,11 +172,13 @@ font-weight: bold;
    box-shadow: rgba(236, 233, 233, 0.911) 0px 3px 8px;
 }
 hr{
+
  width: 70em;
   border: 1px solid rgb(221, 213, 213);
   background-color: rgb(201, 192, 192);
   margin: auto;
   /* margin: 10px 0px; */
+
   margin-top: 40px;
 }
 span{
@@ -221,8 +231,10 @@ margin-left: 7px;
 #head{
   /* height: 100%; */
   /* width: 69%; */
+
   width: 70em;
   height: 130px;
+
   /* border: 1px solid; */
   margin: auto;
 }

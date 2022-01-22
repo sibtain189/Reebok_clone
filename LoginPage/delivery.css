@@ -1,0 +1,167 @@
+#container {
+    width: 1200px;
+    /* height: 500px; */
+    margin: auto;
+    /* background-color: yellow; */
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head {
+    width: 100%;
+    height: 40px;
+    /* border: solid; */
+    margin: 2% auto;
+    display: flex;
+}
+
+.head > div {
+    /* border: solid; */
+    width: 32%;
+    height: 100%;
+    background-color: rgb(226,226,226);
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+}
+
+#details {
+    /* border: solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#left{
+    width: 65%;
+    /* height: 400px; */
+    /* border: solid green; */
+    line-height: 8px;
+    /* margin: auto; */
+}
+
+#right {
+    width: 25%;
+    height: 350px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: solid; */
+}
+
+#form_left {
+    width: 100%;
+    height: 100%;
+    /* border: solid red; */
+}
+
+#leftitem input , select{
+    width: 98%;
+    padding: 0 1%;
+    /* margin: 1% 0 0 0; */
+    height: 27px;
+}
+
+#leftitem {
+    width: 80%;
+    margin-bottom: 3%;
+}
+
+.flex {
+    /* border: solid; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex > div {
+    /* border: solid; */
+    width: 49%;
+}
+
+#left button {
+    background-color: rgb(199,20,50);
+    display: block;
+    margin-top: 2%;
+    height: 40px;
+    width: 30%;
+    color: white;
+    font-size: larger;
+    border: 4px solid rgb(231, 231, 231);
+    box-shadow: rgba(0, 0, 0, 0.54) 0px 2px 5px;
+}
+
+#left button:hover {
+    background-color: rgb(202, 52, 77);
+    outline: none;
+}
+
+#leftitem p {
+    color: red;
+    font-size: 14px;
+}
+
+
+.right1 {
+    width: 94%;
+    height: 7%;
+    /* border: 1px solid rgb(197, 197, 197); */
+    border-top: 2px solid;
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    font-size: 13px;
+    padding: 3%;
+}
+
+.right12 {
+    width: 100%;
+    height: 45%;
+    border-top: 2px solid;
+    background-color: white;
+    /* display: flex; */
+    overflow: scroll;
+}
+
+#js{
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* border: solid red; */
+    font-size: small;
+}
+
+#js > div{
+    width: 47%;
+    height: 100%;
+    /* border: solid green; */
+}
+
+#js p {
+    line-height: 50%;
+}
+
+#js img{
+    height: 100%;
+    width: 100%;
+}
+
+#one, #two, #three {
+    text-align: center;
+    font-weight: bold;
+}
+
+#three {
+    font-size: large;
+}
+
+.number{
+    background-color: red; 
+    color: white; 
+    width: 15px; 
+    text-align: center;
+    border-radius: 7.5px; 
+    margin-right: 1%;
+}
