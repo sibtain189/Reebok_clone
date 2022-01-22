@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@303&display=swap');
 #container{
-    width: 1100px;
+    width: 1400px;
     margin: auto;    
     display: flex;  
     justify-content: space-between;
@@ -9,11 +9,10 @@
     /* border: 1px solid red;           */
 }
 #cont{
-   width: 1100px;
-   height: 40px;
+   width: 1400px;
+   height: 50px;
    /* height: 40px; */
    display: flex;
-   justify-content: space-between;
    /* border: 1px solid green; */
    margin: auto;
    margin-top: 50px;
@@ -22,17 +21,15 @@
 }
 #cont>div{
    height: 100%;
-   width: 33.3%;
-   display: flex;
-   align-items: center;
+   width: 33%;
    /* border: 1px solid yellow;   */
    background-color: rgb(226, 221, 221);
 }
 #cart1{
     /* border: 1px solid black;  */
    width: 96%;
-   height:120px;
-   margin-top : 1%;
+   height:180px;
+   margin : 1% 0;
    display: flex;
    padding: 2%;
    justify-content: space-around;
@@ -98,7 +95,7 @@ img {
    /* border: 1px solid yellow;  */
 }
 #right>div{
-   height: 150px;
+   height: 250px;
    width: 94%;
    display: flex;
    flex-direction: column;
@@ -138,32 +135,32 @@ img {
    border: 4px solid rgba(255, 255, 255, 0.837);
 }
 #promo{
-width:1100px;
+width:1400px;
 margin: auto;
 font-size: 12px;
 font-weight: bold;
 
 }
-/* #promo>input{
+#promo>input{
   margin-top: 20px;
-} */
+}
 #promo button{
-  width: 23%;
+  width: 20%;
   height:60px;
   background-color: crimson;  
   outline: none;
   color: white;
-  font-size: 20px;
-  margin-top: 30px;
+  font-size: larger;
+  margin-top: 50px;
    border: 5px solid rgba(240, 232, 232, 0.966);
    box-shadow: rgba(236, 233, 233, 0.911) 0px 3px 8px;
 }
 hr{
- width: 1100px;
+ width: 1400px;
   border: 1px solid rgb(221, 213, 213);
   background-color: rgb(201, 192, 192);
-  margin: 5px 0px;
-  margin-top: 20px;
+  margin: 10px 0px;
+  margin-top: 40px;
 }
 span{
   font-weight: normal;
@@ -215,8 +212,8 @@ margin-left: 7px;
 #head{
   /* height: 100%; */
   /* width: 69%; */
-  width: 1100px;
-  height: 140px;
+  width: 1400px;
+  height: 100px;
   /* border: 1px solid; */
   margin: auto;
 }
