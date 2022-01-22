@@ -58,14 +58,18 @@ function leftSign(event) {
       if(item.email == a && item.pass == b) {
         alert("login Succesfull");
          count++;
+         localStorage.setItem("login-count",count)
          window.location.href="http://127.0.0.1:5501/HomePage/home.html"
       }
+
+      
 
     });
 
     if(count == 0) {
       alert("Wrong Credentials!!");
       document.querySelector("#wrongDetails").textContent = "Sorry!! wrong credentials";
+      localStorage.setItem("login-count",count)
     }
   }
 }

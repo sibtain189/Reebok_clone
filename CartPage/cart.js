@@ -138,3 +138,15 @@ function abc(){
     document.querySelector("#total").textContent = x*0.9;
 }
 
+
+function checkLogin(){
+
+    var check = localStorage.getItem("login-count")
+    // console.log(chack)
+
+    if(check==1){
+        window.location.href="http://127.0.0.1:5501/LoginPage/delivery.html"
+    }else{
+        window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+    }
+}

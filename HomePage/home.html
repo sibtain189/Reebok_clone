@@ -183,7 +183,7 @@
                     <i class="far fa-user" id="userIcon" onclick="Login()"></i>
                     <i class="far fa-heart" id="heartIcon"></i>
                     </div>
-                    <img src="image/shopping-bag.png" class="bag" alt="">
+                    <img src="image/shopping-bag.png" class="bag" onclick="goToCart()" alt="">
                 </div>
             </ul>
         </nav>
@@ -354,6 +354,10 @@
 
 function Login(){
     window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+}
+
+function goToCart(){
+    window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
 }
 
 </script>

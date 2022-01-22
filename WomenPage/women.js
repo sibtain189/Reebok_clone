@@ -7,7 +7,7 @@ function displayItems(womens_data) {
     div.setAttribute("class", "rb-card");
     div.setAttribute("id", id);
     div.addEventListener("click", function () {
-      goToProductPage(index);
+      goToProductPage(item);
     });
 
     // Showing AddTocart button aand size on hovering
@@ -116,14 +116,12 @@ function sortItems() {
   displayItems(womens_data);
 }
 
-function goToProductPage(index) {
-  console.log("product page");
-  console.log(index);
-  console.log(womens_data[index]);
-  alert("going to product page..configure page")
-
-  //Go to Product Page link
-  window.location.href = "#";
+function goToProductPage(item) {
+  alert("going to product page..configure page");
+    // productData.push(item);
+    localStorage.setItem("reebok-product-data",JSON.stringify(item));
+    //Go to Product Page link
+    window.location.href = "http://127.0.0.1:5501/ProductPage/product.html";
 }
 
 function filterDisplay(checkedArray, val) {

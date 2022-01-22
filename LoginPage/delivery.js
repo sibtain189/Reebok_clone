@@ -1,5 +1,8 @@
 
+var data = JSON.parse(localStorage.getItem("reebok-product-data"))
+
 var billingData = [];
+
 
 // var z = JSON.parse(localStorage.getItem("billingData"));
 
@@ -79,8 +82,8 @@ function checkout() {
     }
 }
 
-var menData = JSON.parse(localStorage.getItem("dummyCartData")) || [];
-
+var menData = [];
+menData.push(data)
 
 display(menData);
 

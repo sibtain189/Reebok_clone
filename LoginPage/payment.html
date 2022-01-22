@@ -648,9 +648,12 @@
         alert("Your order has been placed successfully");
     }
 
+    
+    var data = JSON.parse(localStorage.getItem("reebok-product-data"))
 
+    var menData = [];
 
-    var menData = JSON.parse(localStorage.getItem("dummyCartData")) || [];
+    menData.push(data)
 
     total(menData);
 
