@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://kit.fontawesome.com/d8f09ee9e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,17 +17,17 @@
         Up To 50% Off | Code: SAVEMORE
     </div>
     <!-- created header -->
-    <header>
+    <header class="navHeader">
         <nav class="navbar" id="scroll-bar">
             <ul class="nav-links">
-                <li><img src="image/logo.jpg" id="logo" alt=""></li>
+                <li><img src="image/logo4.jpg" id="logo" onclick="goToHome()" alt=""></li>
                 <div class="items">
                 <li>
                     <a href="../MensPage/men.html">MEN</a>
                     <div class="mega-box">
                         <div class="content">
                             <div class="row">
-                                <header>Feature</header>
+                                <header class="index-Haeder">Feature</header>
                                 <ul class="mega-links">
                                     <li><a href="#">Face Covers</a></li>
                                     <li><a href="#">New Arrivals</a></li>
@@ -59,9 +61,9 @@
                                 <ul class="mega-links">
                                     <li><a href="#">Face Cover</a></li>
                                     <li><a href="#">Bags</a></li>
-                                    <li><a href="#">Shocs</a></li>
-                                    <li><a href="#">Caps</a></li>
-                                    <li><a href="#">Classic</a></li>
+                                    <!-- <li><a href="#">Shocs</a></li> -->
+                                    <!-- <li><a href="#">Caps</a></li>
+                                    <li><a href="#">Classic</a></li> -->
                                 </ul>
                             </div>
                             <div class="row">
@@ -71,7 +73,7 @@
                                     <li><a href="#">Flexweave</a></li>
                                     <li><a href="#">PureMove</a></li>
                                     <li><a href="#">Aztrek</a></li>
-                                    <li><a href="#">UFC</a></li>
+                                    <!-- <li><a href="#">UFC</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -116,9 +118,9 @@
                                 <ul class="mega-links">
                                     <li><a href="#">Face Cover</a></li>
                                     <li><a href="#">Bags</a></li>
-                                    <li><a href="#">Shocs</a></li>
+                                    <!-- <li><a href="#">Shocs</a></li>
                                     <li><a href="#">Caps</a></li>
-                                    <li><a href="#">Classic</a></li>
+                                    <li><a href="#">Classic</a></li> -->
                                 </ul>
                             </div>
                             <div class="row">
@@ -128,7 +130,7 @@
                                     <li><a href="#">Flexweave</a></li>
                                     <li><a href="#">PureMove</a></li>
                                     <li><a href="#">Aztrek</a></li>
-                                    <li><a href="#">UFC</a></li>
+                                    <!-- <li><a href="#">UFC</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -154,7 +156,7 @@
                                 <header>Boys</header>
                                 <ul class="mega-links">
                                     <li><a href="#">Footwear</a></li>
-                                    <li><a href="#">Clothing</a></li>
+                                    <!-- <li><a href="#">Clothing</a></li> -->
                                     <li><a href="#">Accessories</a></li>
                                     
                                 </ul>
@@ -163,7 +165,7 @@
                                 <header>Girls</header>
                                 <ul class="mega-links">
                                     <li><a href="#">Footwear</a></li>
-                                    <li><a href="#">Clothing</a></li>
+                                    <!-- <li><a href="#">Clothing</a></li> -->
                                     <li><a href="#">Accessories</a></li>
                                     
                                 </ul>
@@ -177,13 +179,15 @@
                 </div>
                 <div class="right">
                     <input type="search" class="no-outline" placeholder="Search">
-                    <img src="image/search.png" class="search" alt="">
+                    <!-- <img src="image/search.png" class="search" alt=""> -->
+                    <i class="fas fa-search"></i>
                     <!-- <i class="fas fa-search"></i> -->
                     <div class="icons">
                     <i class="far fa-user" id="userIcon" onclick="Login()"></i>
                     <i class="far fa-heart" id="heartIcon"></i>
                     </div>
-                    <img src="image/shopping-bag.png" class="bag" onclick="goToCart()" alt="">
+                    <i class="fas fa-shopping-bag" onclick="goToCart()"></i>
+                    // <!-- <img src="image/shopping-bag.png" class="bag" onclick="goToCart()" alt=""> -->
                 </div>
             </ul>
         </nav>
@@ -350,14 +354,4 @@
 </script> -->
 
 
-<script>
-
-function Login(){
-    window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
-}
-
-function goToCart(){
-    window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
-}
-
-</script>
+<script src="navbar.js"></script>
