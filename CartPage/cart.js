@@ -121,8 +121,6 @@ function printData(cartData){
         div_items.append(div_ship,div);
         div.append(div1, div2, div3, div4);
         
-       
-
         document.querySelector("#left").append(div,div_items);
 
         abc();
