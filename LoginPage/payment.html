@@ -260,7 +260,7 @@
                         
     
                         <div id="btn_div">
-                            <button id="btn1">CANCEL</button>
+                            <button id="btn1" onclick="window.location.href = 'http://127.0.0.1:5501/HomePage/home.html'">CANCEL</button>
                             <button id="btn2" onclick="check()">MAKE PAYMENT</button>
                             <p id="select_one"></p>
                         </div>
@@ -646,6 +646,7 @@
 
     function cod() {
         alert("Your order has been placed successfully");
+        window.location.href = "http://127.0.0.1:5501/CartPage/cashOnDelivery.html";
     }
 
     
