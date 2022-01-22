@@ -43,10 +43,10 @@
     // color:"white"
     // }
 
-    var data = JSON.parse(localStorage.getItem("reebok-men-data"))
+    var data=JSON.parse(localStorage.getItem("reebok-product-data"))||[]
     console.log(data)
 
-data = data[0];
+// data = data[0];
     var mainDiv = document.createElement("div")
     mainDiv.setAttribute("class","mainDiv")
 

@@ -126,11 +126,12 @@ function displayItems(mens_data) {
   }
 
 
-  function goToProductPage(index) {
+  function goToProductPage(item) {
+    // var productData={};
     // var productData=JSON.parse(localStorage.getItem("reebok-product-data"))||[];
     alert("going to product page..configure page");
-    productData.push(item);
-    localStorage.setItem("reebok-product-data",JSON.stringify(productData));
+    // productData.push(item);
+    localStorage.setItem("reebok-product-data",JSON.stringify(item));
     //Go to Product Page link
     window.location.href = "http://127.0.0.1:5501/ProductPage/product.html";
   }
