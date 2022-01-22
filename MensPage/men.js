@@ -7,7 +7,7 @@ function displayItems(mens_data) {
       div.setAttribute("class", "rb-card");
       div.setAttribute("id", id);
       div.addEventListener("click", function () {
-        goToProductPage(index);
+        goToProductPage(item);
       });
       // Showing AddTocart button aand size on hovering
       div.addEventListener("mouseover", function () {
@@ -116,11 +116,10 @@ function displayItems(mens_data) {
   }
 
   function goToProductPage(index) {
-    console.log("product page");
-    console.log(index);
-    console.log(mens_data[index]);
-    alert("going to product page..configure page")
-
+    // var productData=JSON.parse(localStorage.getItem("reebok-product-data"))||[];
+    alert("going to product page..configure page");
+    productData.push(item);
+    localStorage.setItem("reebok-product-data",JSON.stringify(productData));
     //Go to Product Page link
     window.location.href = "#";
   }
