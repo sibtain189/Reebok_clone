@@ -56,18 +56,15 @@ function leftSign(event) {
 
     user_login.map(function(item) {
       if(item.email == a && item.pass == b) {
-        alert("login Succesfull");
+        alert("login Succesfull redirecting to homepage");
          count++;
          localStorage.setItem("login-count",count)
          window.location.href="http://127.0.0.1:5501/HomePage/home.html"
       }
-
-      
-
     });
 
     if(count == 0) {
-      alert("Wrong Credentials!!");
+      // alert("Wrong Credentials!!");
       document.querySelector("#wrongDetails").textContent = "Sorry!! wrong credentials";
       localStorage.setItem("login-count",count)
     }
@@ -137,7 +134,7 @@ function middleSign(event) {
       window.location.href="login.html"
     }
     else if(d.length < 8){
-      alert("password id too short")
+      alert("password id too short");
     }
     else {
       alert("Password in not matching");

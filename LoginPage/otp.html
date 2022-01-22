@@ -128,7 +128,7 @@
                 <h4>Authenticate Payment</h4>
                 <p>OTP sent to your mobile number ending with xxx-xxx-<span id="number"></span></p>
                 <label for="otp">Enter One Time Password (OTP)</label>
-                <input type="text">
+                <input type="text" placeholder="Enter your OTP (eg. 123456)">
                 <button onclick="payment()">Make Payment</button>
             </div>
             <div id="four">
@@ -156,6 +156,7 @@
         if(document.querySelector("input").value == "123456") {
             alert("Payment Successful");
             document.getElementById("done").textContent = "Payment is successful !! Thank you for shopping with us.";
+            document.getElementById("done").style.color = "green";
         }
         else {
             document.getElementById("done").textContent = "Wrong OTP Entered!!";
