@@ -248,26 +248,26 @@
             <div id="right2">
                 <form>
                     <label for="newCard">New Card</label>
-                    <input id="newCard" type="text" placeholder="Enter Card Number">
+                    <input id="newCard" type="text" placeholder="Enter Card Number(ex:12345)">
                     <p id="wrong_card"></p>
 
                     <div id="flex">
                         <div>
                             <label for="expiry">Expiry</label>
-                            <input type="text" placeholder="MM/YY" id="expiry">
+                            <input type="text" placeholder="MM/YY(ex:12/34)" id="expiry">
                             <p id="wrong_exp_date"></p>
                         </div>
                         
                         <div>
                             <label for="cvv">CVV <i class="material-icons">help</i></label>
-                            <input type="text" placeholder="Enter CVV" id="cvv">
+                            <input type="text" placeholder="Enter CVV(ex:123)" id="cvv">
                             <p id="wrong_cvv"></p>
                         </div>
                         
                     </div>
 
                     <label for="name">Name on Card</label>
-                    <input type="text" id="name" placeholder="Enter name as on card">
+                    <input type="text" id="name" placeholder="Enter name as on card(ex:xyz)">
                     <p id="wrong_name"></p>
 
                     <div id="check" style="margin-top: 3%;">
@@ -317,25 +317,25 @@
             var card = document.querySelector("#newCard").value;
 
             if(card == "") {
-                document.querySelector("#wrong_card").textContent = "Card Number is required";
+                document.querySelector("#wrong_card").textContent = "Card Number is 12345";
             }
 
             var expiry = document.querySelector("#expiry").value;
 
             if(expiry == "") {
-                document.querySelector("#wrong_exp_date").textContent = "Enter valid expiry date";
+                document.querySelector("#wrong_exp_date").textContent = "Enter valid expiry date 12/34";
             }
 
             var cvv = document.querySelector("#cvv").value;
 
             if(cvv == "") {
-                document.querySelector("#wrong_cvv").textContent = "Enter valid cvv number";
+                document.querySelector("#wrong_cvv").textContent = "Enter valid cvv 123";
             }
 
             var name = document.querySelector("#name").value;
 
             if(name == "") {
-                document.querySelector("#wrong_name").textContent = "Please enter valid name as per on card";
+                document.querySelector("#wrong_name").textContent = "Please enter xyz";
             }      
             
             if(card != "" && expiry != "" && cvv != "" && name != "") {

@@ -134,6 +134,7 @@ function middleSign(event) {
       user_login.push(obj);
       localStorage.setItem("userLoginData", JSON.stringify(user_login));
       alert("SignUp Successfull");      
+      window.location.href="login.html"
     }
     else if(d.length < 8){
       alert("password id too short")
