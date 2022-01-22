@@ -24,7 +24,7 @@ function displayItems(mens_data) {
       var image = document.createElement("img");
       image.setAttribute("src", item.image);
       image.addEventListener("click", function () {
-        goToProductPage(index);
+        goToProductPage(item);
       });
 
       var name = document.createElement("p");
@@ -54,7 +54,7 @@ function displayItems(mens_data) {
       details_div.setAttribute("class", "rb-product-details");
       details_div.append(name, category, price_span, size);
       details_div.addEventListener("click", function () {
-        goToProductPage(index);
+        goToProductPage(item);
       });
 
       var cart_div = document.createElement("div");
@@ -118,14 +118,12 @@ function displayItems(mens_data) {
     displayItems(mens_data);
   }
 
-  function goToProductPage(index) {
-    console.log("product page");
-    console.log(index);
-    console.log(mens_data[index]);
-    alert("going to product page..configure page")
-
+  function goToProductPage(item) {
+    alert("going to product page..configure page");
+    // productData.push(item);
+    localStorage.setItem("reebok-product-data",JSON.stringify(item));
     //Go to Product Page link
-    window.location.href = "#";
+    window.location.href = "http://127.0.0.1:5501/ProductPage/product.html";
   }
 
   function filterDisplay(checkedArray, val) {
