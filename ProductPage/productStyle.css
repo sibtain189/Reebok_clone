@@ -1,0 +1,174 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.header{
+    background: rgb(251, 251, 251);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: rgb(82, 82, 82);
+}
+
+.flex-nav{
+    display: flex;
+    margin:10px 0 10px 20px;
+}
+
+.flex-nav>p{
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.flex-nav>p:hover{
+    color: rgb(199, 20, 50);
+}
+
+.mainDiv{
+    display: flex;
+}
+
+.leftMostDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.leftMostDiv > img{
+    height: 65px;
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.leftDiv{
+    margin: 0 90px 0 40px;
+}
+
+.leftDiv > img{
+    width: 500px;
+}
+
+.productIden{
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.productName{
+    font-size: 25px;
+    /* font-weight: 500; */
+    /* margin: 0; */
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 5px;
+}
+
+.priceDiv{
+    display: flex;
+    /* margin-bottom: 5px; */
+}
+
+.priceDiv> p{
+    margin-right: 20px;
+}
+
+
+.strikePrice{
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+}
+
+.originalPrice{
+    color: black;
+    font-weight: bold;
+}
+
+.discountPer{
+    background: rgb(199, 20, 50);
+    padding: 4px 2px;
+    color: white;
+    /* margin: 5px 2px 5px 2px; */
+}
+
+.tax{
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.availColor{
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.colorDiv{
+    display: flex;
+    margin-bottom:30px;
+}
+
+.colorImg{
+    height: 55px;
+    /* width: 70x; */
+}
+
+.inStock{
+    color: green;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.selectSize{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.sizeChart{
+    color: rgb(199, 20, 50);
+    margin-bottom: 10px;
+}
+
+.sizeOfEle{
+    /* padding: 15px ; */
+    padding: 15px 65px 15px 35px;
+    margin-bottom: 10px;
+}
+
+.flex-right{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.blank{
+    margin-left: 745px;
+}
+
+.cart{
+    background-color: rgb(199, 20, 50);
+    width: 210px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart > p{
+    margin-left: 10px;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+
+.cart > i{
+    margin: 15px 20px 15px ;
+    color: white;
+    font-size: 20px;
+}
+
+.cart:hover{
+    background: rgb(155, 6, 31);
+}
+

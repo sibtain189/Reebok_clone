@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+     var mens_data=[
+  {
+    category:"footwear",
+    productType:"shoe",
+    image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d7ebfd560623409387f0ad25012a62ec_9366/classic-leather-legacy-az-shoes.jpg",
+    name:"Classic Leather Legacy AZ Shoes",
+    price:1600,
+    strikeOffPrice:2000,
+    size:[6,7,8,9,10],
+    brand:"classic",
+    discount:"20",
+    color:"white"
+  },
+  {
+    category:"accessories",
+    productType:"socks",
+    image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/2090272248b745deb7e8ab22013a3cb5_9366/crew-basic-socks-six-pack.jpg",
+    name:"Crew Basic Socks Six Pack",
+    price:700,
+    strikeOffPrice:1000,
+    size:['S','M','L'],
+    brand:"sport",
+    discount:"30",
+    color:"black"
+  },
+  {
+    category:"footwear",
+    productType:"shoe",
+    image:"https://assets.reebok.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/bcab89ff00e84cbbbe87ac1500a6ff7e_9366/reebok-nano-x1.jpg",
+    name:"Reebok Nano X1",
+    price:2100,
+    strikeOffPrice:3000,
+    size:[6,7,8,9,10],
+    brand:"sport",
+    discount:"30",
+    color:"black"
+  }
+];
+
+localStorage.setItem("cartData",JSON.stringify(mens_data));
+</script>

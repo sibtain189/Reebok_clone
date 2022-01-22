@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="kids.css" />
+    <script src="kids.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8b3a760ff3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style></style>
+  </head>
+  <body>
+    <div id="rb-men-container-main">
+      <div class="rb-men-prepaid-offer-banner">
+        <p>
+          Extra <strong>10% off</strong> " ON PREPAID ORDERS MINIMUM CART VALUE
+          – INR 1000."
+        </p>
+      </div>
+      <div class="rb-men-products-banner">
+        <h1>BOYS GIRLS</h1>
+        <p>/&nbsp;1854&nbsp;Products</p>
+      </div>
+      <div id="rb-men-container">
+        <div id="rb-filter">
+          <div class="rb-men-filtered-items">
+            <div class="rb-filtered-items">
+              <div class="rb-filtered-items-head">
+                <p class="fil-head">Your Selection</p>
+
+                <div class="clear-all">
+                  <p>Clear All</p>
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+              <div class="rb-filter-values">
+                <div class="rb-cross">
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+
+                  <p>boy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-gender">
+            <div class="rb-filter-cat-gender">
+              <div class="rb-filter-head">Gender</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-gender">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="boy"
+                  id="cb-male"
+                  checked="checked"
+                  name="gender"
+                />
+                <span>Boys</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="girl"
+                  id="female"
+                  name="gender"
+                />
+                <span>Girls</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-category">
+            <div class="rb-filter-cat-category">
+              <div class="rb-filter-head">CATEGORY</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-category">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="footwear"
+                  id="footwear"
+                />
+                <span>FootWear</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="clothing"
+                  id="clothing"
+                />
+                <span>Clothing</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="accessories"
+                  id="accessories"
+                />
+                <span>Accessories</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-pT">
+            <div class="rb-filter-cat-pT">
+              <div class="rb-filter-head">PRODUCT TYPE</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-pT">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="shoes"
+                  id="shoes"
+                />
+                <span>Shoes</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="tshirts"
+                  id="tshirts"
+                />
+                <span>T-shirts</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="hoodies"
+                  id="hoodies"
+                />
+                <span>Hoodies</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="pants"
+                  id="pants"
+                />
+                <span>Pants</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="bags"
+                  id="bags"
+                />
+                <span>Bags</span>
+              </div>
+              <div class="rb-cb view-more">
+                <span> >ViewMore </span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-brand">
+            <div class="rb-filter-cat-brand">
+              <div class="rb-filter-head">Brand</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-brand">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="classic"
+                  id="classic"
+                />
+                <span>Classic</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="sport"
+                  id="sport"
+                />
+                <span>Sport</span>
+              </div>
+            </div>
+          </div>
+          <div id="rb-filter-dropdown-pT">
+            <div class="rb-filter-cat-pT">
+              <div class="rb-filter-head">discount</div>
+              <div class="down-arrow">&blacktriangledown;</div>
+            </div>
+            <div class="rb-filter-checkbox-pT">
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="no-discount"
+                  id="no-discount"
+                />
+                <span>No Discount</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="10-d"
+                  id="10-d"
+                />
+                <span>1-10%</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="20-d"
+                  id="20-d"
+                />
+                <span>11-20%</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="30-d"
+                  id="30-id"
+                />
+                <span>21-30%</span>
+              </div>
+              <div class="rb-cb">
+                <input
+                  type="checkbox"
+                  class="rb-filter-cb"
+                  value="30-d"
+                  id="40-id"
+                />
+                <span>31-40%</span>
+              </div>
+              <div class="rb-cb view-more">
+                <span> >ViewMore </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rb-rt-container">
+          <div class="rb-men-sorting-items">
+            <div>
+              <select id="sort" onchange="sortItems()" class="col">
+                <option value="a">Sort By</option>
+                <option value="asc">Price Low To High</option>
+                <option value="desc">Price High To Low</option>
+                <option value="popular">Most Popular</option>
+                <option value="new">Newsest Arrival</option>
+              </select>
+            </div>
+            <div
+              class="btn-group me-2"
+              role="group"
+              aria-label="First group"
+              id="items-view"
+            >
+              <button type="button" class="btn btn-outline">VIEW :</button>
+              <button type="button" class="btn border-right">30</button>
+              <button type="button" class="btn border-right">50</button>
+              <button type="button" class="btn border-right">60</button>
+              <button type="button" class="btn">80</button>
+            </div>
+            <div id="rb-pages-div">
+              <select
+                name="rb-item-pages"
+                id="rb-pages"
+                class="btn btn-outline-secondary"
+              ></select>
+              <span>&nbsp of&nbsp 21</span>
+              <span><i class="fas fa-chevron-circle-left"></i></span>
+              <span><i class="fas fa-chevron-circle-right"></i></span>
+            </div>
+          </div>
+          <div id="rb-men-display"></div>
+        </div>
+      </div>
+      <div id="container" class="rb-footer">
+        <div id="start">
+          <div>Free Shipping + Free 30-Day Returns *</div>
+          <div>Call Us Between 8AM To 8PM : 1-800-120-4400</div>
+          <div>Email Us: Customer.Care@Reebok.Com</div>
+        </div>
+        <div id="center">
+          <div>
+            <ul>
+              <li class="cap">MEN</li>
+              <li>Footwear</li>
+              <li>Clothing</li>
+              <li>Accessories</li>
+              <li class="cap">WOMEN</li>
+              <li>Footwear</li>
+              <li>Clothing</li>
+              <li>Accessories</li>
+              <li class="cap">KIDS</li>
+              <li>Footwear</li>
+              <li>Clothing</li>
+              <li>Accessories</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li class="cap">FITNESS</li>
+              <li>Running</li>
+              <li>Training</li>
+              <li>Classical</li>
+              <li>Walking</li>
+              <li>Mixed Martial Arts</li>
+              <li>Swimmimg</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li class="cap">QUICK SHOP</li>
+              <li>Running</li>
+              <li>Training</li>
+              <li>Classical</li>
+              <li>Walking</li>
+              <li>Mixed Martial Arts</li>
+              <li>Swimmimg</li>
+              <li class="cap">NEW ARRIVALS</li>
+              <li>New Arrivals</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li class="cap">CUSTOMER SURVICE</li>
+              <li>Contact Us</li>
+              <li>My Account</li>
+              <li><sup>*</sup>Privacy Policy</li>
+              <li><sup>*</sup>Terms And Conditions</li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="data:image/png;base64,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"
+              alt="logo"
+            />
+          </div>
+        </div>
+
+        <div id="bottom2">
+          SIGN UP AND GET<span style="color: crimson; margin-left: 5px"
+            >15% OFF.</span
+          >
+
+          <button>
+            Sign Up&nbsp;&nbsp;<i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </div>
+        <div id="bottom1">
+          <img
+            src="https://content.shop4reebok.com/static/footer/Payment_Icon_A.jpg"
+            alt=""
+          />
+        </div>
+        <div id="end">
+          ©2021 SHOP4REEBOK.COM | POWERED BY : ADI SPORTS (INDIA) PVT. LTD
+          <img
+            src="https://content.shop4reebok.com/static/footer/ADI_SPORTS_LOGO.jpg"
+            alt="logo"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var mens_data = JSON.parse(localStorage.getItem("reebok-kid-data")) || [];
+  var cart_Data = JSON.parse(localStorage.getItem("reebok-cart-data")) || [];
+  displayItems(mens_data);
+
+  //filter
+
+  //gender
+  $(".rb-filter-cat-gender").click(function () {
+    $(".rb-filter-checkbox-gender").toggle();
+  });
+
+  //category
+  $(".rb-filter-cat-category").click(function () {
+    $(".rb-filter-checkbox-category").toggle();
+  });
+
+  //productType
+  $(".rb-filter-cat-pT").click(function () {
+    $(".rb-filter-checkbox-pT").toggle();
+  });
+
+  //brand
+  $(".rb-filter-cat-brand").click(function () {
+    $(".rb-filter-checkbox-brand").toggle();
+  });
+
+  $("#rb-filter :checkbox").change(function () {
+    // this will contain a reference to the checkbox
+    var checkedArray = ["boy"];
+    if (this.checked) {
+      // the checkbox is now checked
+      // var cat = this.name + " :";
+      // if(this.val=="female"){
+      //   alert("");
+      // }
+      var val = this.value;
+
+      if (val == "girl") {
+        alert("go to women page");
+        window.location.href = "#";
+      } else if (
+        val == "footwear" ||
+        val == "clothing" ||
+        val == "accessories"
+      ) {
+        filterByCategory(val);
+      } else if (
+        val == "shoes" ||
+        val == "tshirts" ||
+        val == "hoodies" ||
+        val == "pants" ||
+        val == "bags"
+      ) {
+        filterByProductType(val);
+      }
+      else if (
+        val == "classic" ||
+        val == "sport"
+      ) {
+        filterByBrand(val);
+      }
+
+      checkedArray.push(val);
+      //console.log(checkedArray);
+      filterDisplay(checkedArray, val);
+    } else {
+      // the checkbox is now no longer checked
+      var val = this.value;
+      // alert("not checked" + val);
+      document.getElementById(val).checked = false;
+      removeSelectedFilter(checkedArray.indexOf(val));
+      $(".clear-all").hide();
+    }
+  });
+
+  $(".clear-all").click(function () {
+    alert("navigate to home page");
+    window.location.href = "#";
+  });
+
+  var pages = 21;
+  for (var i = 1; i <= pages; i++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", i);
+    option.textContent = i;
+    document.getElementById("rb-pages").append(option);
+  }
+
+  
+</script>
