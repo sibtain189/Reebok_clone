@@ -137,7 +137,7 @@
         </div>
         <div id="order_info">
             <div id="left">
-                <p>You can use this to track your Order details. We appreciate your business! You will receive email communication at<span id="email"></span>to keep you updated on this status of your order</p>
+                <p>You can use this to track your Order details. We appreciate your business! You will receive email communication at <span id="email"></span> to keep you updated on this status of your order.</p>
             </div>
             <div id="right">
                <div>Order Number</div>
@@ -167,7 +167,7 @@
         </div>
         <div id="ship">
             <div style="background-color: rgb(204, 200, 200);"><h2>Ship To</h2></div>
-            <div style="height: 50px;border: 1px solid;"></div>
+            <div style="padding-left: 1%;" id="billing_data"></div>
           
         </div>
         <hr id="last">
@@ -191,14 +191,16 @@
             <p>(Inclusive of <span id="t_price"></span> tax)</p>
         </div>
        <hr style="border: 3px solid black;background-color: black;">
-       <p>Order Confirmation and Status will be sent to <span></span></p>
+       <p>Order Confirmation and Status will be sent to <span id="email1"></span></p>
     </div>
 </body>
 </html>
 <script>
-    // var email = JSON.parse(localStorage.getItem("userLoginData"));
-    // var data1 = email[email.length-1];
-    // document.getElementById("email").textContent = data1.email;
+    var email = JSON.parse(localStorage.getItem("userLoginData"));
+    var data1 = email[email.length-1];
+    document.getElementById("email").textContent = data1.email;
+    document.getElementById("email1").textContent = data1.email;
+    
 
     var data = JSON.parse(localStorage.getItem("cartData")) || [];
 tracking(data);
@@ -249,6 +251,34 @@ function tracking(){
         document.getElementById("t_price").textContent = t;
 
     })
+
+
+    var billing = JSON.parse(localStorage.getItem("billingData"));
+    var data_billing = billing[billing.length - 1];
+
+    var p1 = document.createElement("p");
+    p1.textContent = data_billing.firstName + " " + data_billing.lastName;
+
+    var p2 = document.createElement("p");
+    p2.textContent = data_billing.address;
+
+    var p3 = document.createElement("p");
+    p3.textContent = data_billing.landMark;
+
+    var p4 = document.createElement("p");
+    p4.textContent = data_billing.state;
+
+    var p5 = document.createElement("p");
+    p5.textContent = data_billing.pinCode;
+
+    var p6 = document.createElement("p");
+    p6.textContent = data_billing.phoneNumber;
+
+
+
+    document.querySelector("#billing_data").append(p1, p2, p3, p4, p5, p6)
+
+
 
 
         function total() {
