@@ -159,7 +159,7 @@
             </div>
             <div class="left2">
                 <p style="font-weight: 1000; font-size: x-large;">Enter new card</p>
-                <p style="font-weight: 700;">Total Payable Amount ₹ <span id="rupee"></span></p>
+                <p style="font-weight: 700;">Total Payable Amount ₹ <span id="rupee" style="font-weight: 700;font-size: 17px;"></span></p>
                 <p style="font-size: x-small;">Transaction Id: 698494080257</p>
             </div>
         </div>
@@ -342,7 +342,8 @@
 
                 card_data.map(function (items) {
                     if(card == items.card_num && expiry == items.exp && cvv == items.cvv && name == items.name) {
-                        alert("Redirecting you to payment gateway");
+                        alert("OTP is send to your registered mobile number");
+                        window.location.href = "otp.html";
                     }
                     else {
                         document.querySelector("#wrong_check").textContent = "Sorry!! wrong credentials";
@@ -356,4 +357,10 @@
             document.querySelector("#wrong_check").textContent = "please tick the checkbox";
         }
     }
+
+
+
+    var total = JSON.parse(localStorage.getItem("finalTotal"));
+    document.getElementById("rupee").textContent = total;
+
 </script>

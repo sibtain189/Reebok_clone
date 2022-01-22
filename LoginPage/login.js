@@ -1,4 +1,9 @@
 
+
+var user_login = JSON.parse(localStorage.getItem("userLoginData")) || [];
+
+
+
 var checkbox = document.querySelector("input[name=checkbox]");
 
 checkbox.addEventListener('change', function() {
@@ -13,7 +18,8 @@ checkbox.addEventListener('change', function() {
     var submit = document.createElement("button");
     submit.textContent = "Continue As Guest     >";
     submit.setAttribute("id", "sign_in");
-    submit.style.width = "60%";
+    submit.style.marginTop = "10%";
+    submit.style.width = "55%";
 
     document.querySelector("#pass").style.display = "none";
 
@@ -44,31 +50,92 @@ function leftSign(event) {
   else if(b == "") {
     document.querySelector(".wrong_left_pass").textContent = "Please enter a valid Password.";
   }
+
+  else if(a != "" && b != "") {    
+    var count = 0;
+
+    user_login.map(function(item) {
+      if(item.email == a && item.pass == b) {
+        alert("login Succesfull");
+        return count++;
+      }
+    });
+
+    if(count == 0) {
+      alert("Wrong Credentials!!");
+      document.querySelector("#wrongDetails").textContent = "Sorry!! wrong credentials";
+    }
+  }
 }
 
+document.querySelector("#middle_sign_in").addEventListener("click", middleSign);
 
-document.querySelector("#middle_form").addEventListener("submit", middleSign);
 
 function middleSign(event) {
   event.preventDefault();
-  document.querySelector(".wrong_left_mail").textContent = "";
-  document.querySelector(".wrong_left_pass").textContent = "";
-  console.log("yes");
+  document.querySelector("#wrong_middle_first_name").textContent = "";
+  document.querySelector("#wrong_middle_last_name").textContent = "";
+  document.querySelector("#wrong_middle_email").textContent = "";
+  document.querySelector("#wrong_middle_pass1").textContent = "";
+  document.querySelector("#wrong_middle_pass2").textContent = "";
+  document.querySelector("#wrong_gender").textContent = "";
+  // console.log("yes");
+
   var a = document.querySelector("#first_name").value;
 
   var b = document.querySelector("#last_name").value;
 
   var c = document.querySelector("#middle_email").value;
 
+  var d = document.querySelector("#middle_pass").value;
+
+  var e = document.querySelector("#retype_middle_pass").value;
+
+  var f = document.querySelector("#gen1");
+
+  var g = document.querySelector("#gen2");
+
   if(a == "") {
-    document.querySelector(".wrong_left_mail").textContent = "Please enter a valid Email address.";
+    document.querySelector("#wrong_middle_first_name").textContent = "Please enter your first name.";
   }
 
   if(b == "") {
-    document.querySelector(".wrong_left_pass").textContent = "Please enter a valid Password.";
+    document.querySelector("#wrong_middle_last_name").textContent = "Please enter your last name";
   }
 
-  else {
+  if(c == "") {
+    document.querySelector("#wrong_middle_email").textContent = "Please enter a valid Email address.";
+  }
 
+  if(d== "") {
+    document.querySelector("#wrong_middle_pass1").textContent = "Please enter a valid 8 character Password.";
+  }
+
+  if(e == "") {
+    document.querySelector("#wrong_middle_pass2").textContent = "Retype your password";
+  }
+
+  if(!f.checked && !g.checked) {
+    document.querySelector("#wrong_gender").textContent = "Select your gender";
+  }
+
+  if (a != "" && b != "" && c != "" && d!= "" && e != "" && (f.checked || g.checked)) {
+    if(d == e && d.length >= 8) {
+      var obj = {
+        email : c,
+        pass : d
+      };
+      user_login.push(obj);
+      localStorage.setItem("userLoginData", JSON.stringify(user_login));
+      alert("SignUp Successfull");      
+    }
+    else if(d.length < 8){
+      alert("password id too short")
+    }
+    else {
+      alert("Password in not matching");
+      document.querySelector("#wrong_middle_pass2").textContent = "Password not matching";
+    }
   }
 }
+

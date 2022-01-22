@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Secure Payment</title>
 
     <style>
 
@@ -23,7 +23,7 @@
         }
 
         #header > div {
-            width: 32%;
+            width: 33%;
             border: 1px solid rgb(180, 180, 180);
             padding-left: 1%;
             display: flex;
@@ -216,14 +216,23 @@
             margin-left: 5%;
             font-size: small;
         }
+
+        .number{
+            background-color: red; 
+            color: white; 
+            width: 15px; 
+            text-align: center;
+            border-radius: 7.5px; 
+            margin-right: 1%;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <div id="header">
-            <div>Bag</div>
-            <div>Delivery</div>
-            <div style="background-color: rgb(236, 236, 236); flex-grow: 2;">Payment</div>
+            <div><span class="number">1</span> Bag</div>
+            <div><span class="number">2</span>Delivery</div>
+            <div style="background-color: rgb(240, 240, 240);"> <span class="number" style="background-color: rgb(255, 154, 136);">3</span>Payment</div>
         </div>
         <div id="container">
             <div id="left">
@@ -269,24 +278,24 @@
                 <div id="heading_right"><p>Order Summary (<span id="right_head"></span> items)</p></div>
                 <div id="right_body">
                     <div>Merchandise Subtotal <br> (Incl Item Discounts)</div>
-                    <div></div>
+                    <div id="total1"></div>
                     <div>Order Discounts</div>
-                    <div></div>
-                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194);">Total</div>
-                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194);"></div>
+                    <div id="total2"></div>
+                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194); font-size: large;">Total</div>
+                    <div style="font-weight: bold; border-top: solid rgb(194, 194, 194); font-size: x-large;" id="total3"></div>
                 </div>
-                <div id="right_footer">
+                <div id="right_footer" style="font-size: small;">
                     <div style="display: flex;justify-content: space-between; border-bottom: solid;">
                         <div style="font-weight: bold;">Billing Address</div>
                         <div>Edit</div>
                     </div>
                     <div id="footer_grid">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div id="one"></div>
+                        <div id="two"></div>
+                        <div id="three"></div>
+                        <div id="four"></div>
+                        <div id="five"></div>
+                        <div id="six"></div>
                     </div>
                     
                 </div>
@@ -304,75 +313,6 @@
     document.querySelector(".card5").addEventListener("click", display5);
 
     // function display1 (){
-
-    //     document.querySelector("#card_details").innerHTML = "";
-
-    //     document.querySelector(".card1").style.backgroundColor = "white";
-    //     document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card4").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)";
-
-    //     var div_main = document.createElement("div");
-    //     div_main.setAttribute("id","card_details");
-
-    //     var div1 = document.createElement("div");
-    //     div1.textContent = "You Will Be Redirected To A Secure Payment Gateway.";
-
-    //     var div2 = document.createElement("div");
-    //     div2.setAttribute("class","card_btn");
-
-    //     var input1 = document.createElement("input");
-    //     input1.setAttribute("type","radio");
-    //     var image1 = document.createElement("img");
-    //     image1.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/25/Logo_payU.jpg");
-
-    //     var input2 = document.createElement("input");
-    //     input2.setAttribute("type","radio");
-    //     var image2 = document.createElement("img");
-    //     image2.setAttribute("src", "https://bit.ly/3GJ2cFq");
-
-    //     div2.append(input1, image1, input2, image2);
-
-    //     var div3 = document.createElement("div");
-    //     div3.setAttribute("class", "discount");
-
-    //     div3.textContent = "EXTRA 10% OFF ON PRE-PAID ORDERS";
-    //     var dis_para = document.createElement("p");
-    //     dis_para.textContent = "on prepaid orders minimum cart value - INR 1000";
-
-    //     div3.append(dis_para);
-
-    //     var div4 = document.createElement("div");
-    //     div4.setAttribute("class", "btn_div");
-    //     var d4_btn1 = document.createElement("button");
-    //     d4_btn1.textContent = "CANCEL";
-    //     d4_btn1.setAttribute("id", "btn1");
-    //     var d4_btn2 = document.createElement("button");
-    //     d4_btn2.setAttribute("id", "btn2");
-    //     d4_btn2.textContent = "MAKE PAYMENT";
-    //     d4_btn2.setAttribute("onclick", "check");
-    //     var no_select = document.createElement("p");
-    //     no_select.setAttribute("id", "select_one");
-
-    //     div4.append(d4_btn1, d4_btn2, no_select);
-
-    //     var div5 = document.createElement("div");
-    //     div5.setAttribute("class", "footer");
-
-    //     var d5_para1 = document.createElement("p");
-    //     d5_para1.textContent = 'Note: After Clicking On The "MAKE PAYMENT" Button, You Will Be Directed To A Secure Gateway For Payment. After Completing The Payment Process, You Will Be Redirected Back To Shop4reebok.Com To View Details Of Your Order.';
-    //     var d5_para2 = document.createElement("p");
-    //     d5_para2.textContent = 'By Placing This Order I Hereby Agree To The Abide By The Terms & Conditions.';
-
-    //     div5.append(d5_para1, d5_para2);
-
-    //     document.querySelector("#card_details").append(div1, div2, div3, div4, div5);
-    // }
-
-
-
-    // function display2 (){
 
     //     document.querySelector("#card_details").innerHTML = "";
 
@@ -449,6 +389,7 @@
         document.querySelector("#first").style.display = "none";
         document.querySelector("#extra").style.display = "none";
         document.querySelector("#footerp1").style.display = "none";
+        document.querySelector("#select_one").textContent = "";
         // document.querySelector("#card_details").style.display = "none";
 
 
@@ -470,11 +411,14 @@
         p4.textContent = "delivery executive for these options.";
 
         document.querySelector("#btn2").textContent = " PLACE ORDER";
+        document.querySelector("#btn2").setAttribute("onclick", "cod()");
 
         document.querySelector
 
         div1.append(p1, p2, p3, p4);
         document.querySelector(".add").append(div1);
+
+        // window.location.href = ""
     }
 
     function display4 (){
@@ -490,6 +434,9 @@
         document.querySelector("#extra").style.display = "block";
         document.querySelector("#footerp1").style.display = "block";
         document.querySelector(".add").innerHTML = "";
+        document.querySelector("#select_one").textContent = "";
+
+        document.querySelector("#btn2").setAttribute("onclick", "check()");
 
         var div1 = document.createElement("div");
         div1.setAttribute("class", "card_btn");
@@ -518,6 +465,8 @@
         document.querySelector("#btn2").textContent = " MAKE PAYMENT";
 
         document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
+
+        // window.location.href = "finalPayment.html";
     }
 
 
@@ -534,6 +483,9 @@
         document.querySelector("#extra").style.display = "block";
         document.querySelector("#footerp1").style.display = "block";
         document.querySelector(".add").innerHTML = "";
+        document.querySelector("#select_one").textContent = "";
+
+        document.querySelector("#btn2").setAttribute("onclick", "check()");
 
         var div1 = document.createElement("div");
         div1.setAttribute("class", "card_btn");
@@ -580,6 +532,9 @@
         document.querySelector("#extra").style.display = "block";
         document.querySelector("#footerp1").style.display = "block";
         document.querySelector(".add").innerHTML = "";
+        document.querySelector("#select_one").textContent = "";
+
+        document.querySelector("#btn2").setAttribute("onclick", "check()");
 
         var div1 = document.createElement("div");
         div1.setAttribute("class", "card_btn");
@@ -626,6 +581,9 @@
         document.querySelector("#extra").style.display = "block";
         document.querySelector("#footerp1").style.display = "block";
         document.querySelector(".add").innerHTML = "";
+        document.querySelector("#select_one").textContent = "";
+
+        document.querySelector("#btn2").setAttribute("onclick", "check()");
 
         var div1 = document.createElement("div");
         div1.setAttribute("class", "card_btn");
@@ -659,13 +617,8 @@
         document.querySelector(".card_btn").append(input1, image1, input2, image2, input3, image3);
     }
 
-    // function display4() {
-    //     document.querySelector(".card1").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card2").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card3").style.backgroundColor = "rgb(230, 230, 230)";
-    //     document.querySelector(".card4").style.backgroundColor = "white";
-    //     document.querySelector(".card5").style.backgroundColor = "rgb(230, 230, 230)"
-    // }
+
+
 
     function check() {
         // console.log("yes");
@@ -686,7 +639,45 @@
         else {
             alert("Please select payment option");
             document.querySelector("#select_one").textContent = "Please select any one payment option";
+            // window.location.href = "payment.html";
         }
     }
 
+
+    function cod() {
+        alert("Your order has been placed successfully");
+    }
+
+
+
+    var menData = JSON.parse(localStorage.getItem("dummyCartData")) || [];
+
+    total(menData);
+
+    function total() {
+        var total = menData.reduce(function(a,b) {
+            return (a + b.price);
+        },0);
+
+        document.getElementById("total1").textContent = total;
+        // document.getElementById("total1").style.textAlign = "centre";
+
+        document.getElementById("total2").textContent = "10% discount";
+        document.getElementById("total3").textContent = total * 0.9;
+
+        localStorage.setItem("finalTotal", 0.9*total);
+        // return total;
+    }
+
+
+    var billingAddress = JSON.parse(localStorage.getItem("billingData"));
+
+    billingAddress.map(function (item) {
+        document.getElementById("one").textContent = item.firstName;
+        document.getElementById("two").textContent = item.lastName;
+        document.getElementById("three").textContent = item.address;
+        document.getElementById("four").textContent = item.landMark;
+        document.getElementById("five").textContent = item.state;
+        document.getElementById("six").textContent = item.pinCode;
+    })
 </script>
