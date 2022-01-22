@@ -99,7 +99,6 @@ function displayItems(mens_data) {
   function addProductToCart(index) {
     cart_Data.push(mens_data[index]);
     localStorage.setItem("reebok-cart-data", JSON.stringify(cart_Data));
-    alert("Added to Cart Successfully..configure the page");
     window.location.href="#";
   }
 
@@ -124,6 +123,7 @@ function displayItems(mens_data) {
 
     displayItems(mens_data);
   }
+
 
 
   function goToProductPage(item) {
