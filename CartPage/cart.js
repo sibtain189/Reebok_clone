@@ -13,9 +13,6 @@ else{
     printData(cartData)
 }
 
-
-
-
 function printData(cartData){
     document.querySelector("#left").innerHTML="";
     cartData.map(function(items,index){

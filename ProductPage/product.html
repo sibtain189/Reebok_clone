@@ -21,7 +21,7 @@
     <div class="container"></div>
     <div class="flex-right">
         <div class="blank"></div>
-        <div class="cart">
+        <div class="cart" onclick="goToCart()">
             <p>Add To Cart</p>
             <i class="fas fa-long-arrow-alt-right arrow"></i>
         </div>
@@ -172,4 +172,17 @@
     mainDiv.append(leftMostDiv,leftDiv,rightDiv)
 
     document.querySelector(".container").append(mainDiv)
+
+
+    function goToCart(){
+        if(document.querySelector(".sizeOfEle").value=="SELECT SIZE"){
+            alert("Please Select Size")
+            
+        }else{
+            window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
+        }
+        console.log(document.querySelector(".sizeOfEle").value)
+    }
+
+
 </script>
