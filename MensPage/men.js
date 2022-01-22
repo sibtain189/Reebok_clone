@@ -93,7 +93,6 @@ function displayItems(mens_data) {
   function addProductToCart(index) {
     cart_Data.push(mens_data[index]);
     localStorage.setItem("reebok-cart-data", JSON.stringify(cart_Data));
-    alert("Added to Cart Successfully..configure the page");
     window.location.href="#";
   }
 
@@ -123,7 +122,6 @@ function displayItems(mens_data) {
     console.log("product page");
     console.log(index);
     console.log(mens_data[index]);
-    alert("going to product page..configure page")
 
     //Go to Product Page link
     window.location.href = "#";
