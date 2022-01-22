@@ -55,7 +55,7 @@ function printData(cartData){
         color.textContent = "Color: "+items.color;
         color.style.fontFamily = "arial"
         var size = document.createElement("p");
-        size.textContent = "Size: "+items.size;
+        size.textContent = "Size: 7";
         size.style.fontFamily = "arial"
         var  productType = document.createElement("p");
         productType.textContent = items.productType;
@@ -134,7 +134,9 @@ function abc(){
         return (+a + +b.price);
     },0) 
     document.querySelector("#mrp").textContent= x;
-    document.querySelector("#diss").textContent = "10%";
+    document.querySelector("#mrp").style.fontSize = "18px"
+    document.querySelector("#diss").textContent = "10% OFF";
+    document.querySelector("#diss").style.color = "red"
     document.querySelector("#total").textContent = x*0.9;
 }
 

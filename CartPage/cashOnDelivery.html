@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Page</title>
-     <style> 
+    <link rel="stylesheet" href="cashOnDelivery.css">
+    <!-- <style>
         #container{
-            width: 1100px;
+            width: 1300px;
              height: 1100px; 
              margin: auto;
             /* border: 1px solid; */
@@ -112,9 +113,9 @@
             display: grid;
             grid-template-columns: repeat(2,1fr);
         }
-        /* #final_pay2>div{
-             border: 1px solid; 
-        } */
+        #final_pay2>div{
+            /* border: 1px solid; */
+        }
       #bottom>p{
           text-align: end;
           font-size: large;
@@ -126,7 +127,7 @@
           font-weight: bold;
           letter-spacing: 1px;
       }
-    </style> 
+    </style> -->
 </head>
 <body>
     <div id="container">
@@ -136,29 +137,29 @@
         </div>
         <div id="order_info">
             <div id="left">
-                <p>You can use this to track your Order details. We appreciate your business! You will receive email communication at<span></span>to keep you updated on this status of your order</p>
+                <p>You can use this to track your Order details. We appreciate your business! You will receive email communication at<span id="email"></span>to keep you updated on this status of your order</p>
             </div>
             <div id="right">
                <div>Order Number</div>
-               <div></div>
+               <div id="order_num"></div>
                <div>Order Date</div>
-               <div></div>
+               <div id="order_date"></div>
                <div>Order Total</div>
-               <div></div>
+               <div id="order_total"></div>
             </div>
         </div>
         <hr>
-        <h1>ORDER SUMMARY FOR...</h1>
+        <h2>ORDER SUMMARY FOR...</h2>
         <hr  id="first">
         <div id="summ">
             <table>
                 <thead style="background-color: rgb(230, 221, 221);">
-                   <tr>
-                       <td><h3>Item</h3></td>
-                       <td><h3>Delivery Status</h3></td>
-                       <td><h3>Quantity</h3></td>
-                       <td><h3>Unit Price</h3></td>
-                       <td><h3>Total</h3></td>
+                   <tr style="height: 20%;font-size: 14px;font-weight: bold;">
+                       <td>Item</td>
+                       <td>Delivery Status</td>
+                       <td>Quantity</td>
+                       <td>Unit Price</td>
+                       <td>Total</td>
                    </tr> 
                 </thead>
                 <tbody></tbody>
@@ -171,26 +172,93 @@
         </div>
         <hr id="last">
         <div id="pay_method">
-            <div><h2>Payment Method</h2></div>
-            <div><h2 style="text-align: end;">Cart <Summary></Summary></h2></div>
+            <div style="height:30px;font-weight: bold;font-size: 16px;">Payment Method</div>
+            <div style="text-align: end;height:30px;font-weight: bold;font-size: 16px;">Cart <Summary></Summary></h2></div>
         </div>
         <div id="final">
             <div  id="final_pay1"><h3>COD</h3></div>
             <div id="final_pay2">
                 <div><h3>Merchandise Subtotal <span>(Incl Item Discounts)</span></h3></div>
-                <div></div>
+                <div id="s_total"></div>
                 <div><h3>Order Discounts</h3></div>
-                <div></div>
+                <div id="di"></div>
                 <div><h3>Total Order Cost</h3></div>
-                <div></div>
+                <div id="t_order"></div>
             </div>
           
         </div>
         <div id="bottom">
-            <p>(Inclusive of ₹1067.64 tax)</p>
+            <p>(Inclusive of <span id="t_price"></span> tax)</p>
         </div>
        <hr style="border: 3px solid black;background-color: black;">
        <p>Order Confirmation and Status will be sent to <span></span></p>
     </div>
 </body>
 </html>
+<script>
+    // var email = JSON.parse(localStorage.getItem("userLoginData"));
+    // var data1 = email[email.length-1];
+    // document.getElementById("email").textContent = data1.email;
+
+    var data = JSON.parse(localStorage.getItem("cartData")) || [];
+tracking(data);
+
+function tracking(){
+    data.map(function(item,index){
+
+
+        document.getElementById("order_date").textContent = "Jan-22-2022";
+
+
+        document.getElementById("order_num").textContent = "6524378214368";
+
+        var t = total(data);
+
+        document.getElementById("order_total").textContent = t;
+
+
+        var tr = document.createElement("tr");
+
+        var item1 = document.createElement("td");
+        item1.textContent = item.productType;
+
+
+        var item2 = document.createElement("td");
+        item2.textContent = "Success";
+
+        var item3 = document.createElement("td");
+        item3.textContent = 1;
+
+        var item4 = document.createElement("td");
+        item4.textContent = item.price;
+
+        var item5 = document.createElement("td");
+        item5.textContent = item.price;
+
+        tr.append(item1, item2, item3, item4, item5);
+
+        document.querySelector("tbody").append(tr);
+
+
+        document.getElementById("s_total").textContent = t;
+
+        document.getElementById("di").textContent = "-10% OFF";
+
+        document.getElementById("t_order").textContent = t;
+
+        document.getElementById("t_price").textContent = t;
+
+    })
+
+
+        function total() {
+            var final_total =  data.reduce(function(a,b){
+            return (a + +b.price);     
+            }, 0);
+
+            return final_total;
+        }
+    
+        // console.log(final_total);
+}
+</script>
