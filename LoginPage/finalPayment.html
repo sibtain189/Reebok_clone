@@ -159,7 +159,7 @@
             </div>
             <div class="left2">
                 <p style="font-weight: 1000; font-size: x-large;">Enter new card</p>
-                <p style="font-weight: 700;">Total Payable Amount ₹ <span id="rupee"></span></p>
+                <p style="font-weight: 700;">Total Payable Amount ₹ <span id="rupee" style="font-weight: 700;font-size: 17px;"></span></p>
                 <p style="font-size: x-small;">Transaction Id: 698494080257</p>
             </div>
         </div>
@@ -248,26 +248,26 @@
             <div id="right2">
                 <form>
                     <label for="newCard">New Card</label>
-                    <input id="newCard" type="text" placeholder="Enter Card Number">
+                    <input id="newCard" type="text" placeholder="Enter Card Number(ex:12345)">
                     <p id="wrong_card"></p>
 
                     <div id="flex">
                         <div>
                             <label for="expiry">Expiry</label>
-                            <input type="text" placeholder="MM/YY" id="expiry">
+                            <input type="text" placeholder="MM/YY(ex:12/34)" id="expiry">
                             <p id="wrong_exp_date"></p>
                         </div>
                         
                         <div>
                             <label for="cvv">CVV <i class="material-icons">help</i></label>
-                            <input type="text" placeholder="Enter CVV" id="cvv">
+                            <input type="text" placeholder="Enter CVV(ex:123)" id="cvv">
                             <p id="wrong_cvv"></p>
                         </div>
                         
                     </div>
 
                     <label for="name">Name on Card</label>
-                    <input type="text" id="name" placeholder="Enter name as on card">
+                    <input type="text" id="name" placeholder="Enter name as on card(ex:xyz)">
                     <p id="wrong_name"></p>
 
                     <div id="check" style="margin-top: 3%;">
@@ -317,32 +317,33 @@
             var card = document.querySelector("#newCard").value;
 
             if(card == "") {
-                document.querySelector("#wrong_card").textContent = "Card Number is required";
+                document.querySelector("#wrong_card").textContent = "Card Number is 12345";
             }
 
             var expiry = document.querySelector("#expiry").value;
 
             if(expiry == "") {
-                document.querySelector("#wrong_exp_date").textContent = "Enter valid expiry date";
+                document.querySelector("#wrong_exp_date").textContent = "Enter valid expiry date 12/34";
             }
 
             var cvv = document.querySelector("#cvv").value;
 
             if(cvv == "") {
-                document.querySelector("#wrong_cvv").textContent = "Enter valid cvv number";
+                document.querySelector("#wrong_cvv").textContent = "Enter valid cvv 123";
             }
 
             var name = document.querySelector("#name").value;
 
             if(name == "") {
-                document.querySelector("#wrong_name").textContent = "Please enter valid name as per on card";
+                document.querySelector("#wrong_name").textContent = "Please enter xyz";
             }      
             
             if(card != "" && expiry != "" && cvv != "" && name != "") {
 
                 card_data.map(function (items) {
                     if(card == items.card_num && expiry == items.exp && cvv == items.cvv && name == items.name) {
-                        alert("Redirecting you to payment gateway");
+                        alert("OTP is send to your registered mobile number");
+                        window.location.href = "otp.html";
                     }
                     else {
                         document.querySelector("#wrong_check").textContent = "Sorry!! wrong credentials";
@@ -356,4 +357,10 @@
             document.querySelector("#wrong_check").textContent = "please tick the checkbox";
         }
     }
+
+
+
+    var total = JSON.parse(localStorage.getItem("finalTotal"));
+    document.getElementById("rupee").textContent = total;
+
 </script>

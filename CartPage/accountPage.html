@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reebok-My Account</title>
+    <style>
+        #container{
+            width: 1000px;
+            height: 650px;
+            margin: auto;
+            /* border: 2px solid black; */
+        }
+        #acc{
+            width: 100%;
+            height: 22%;
+            margin-top: 50px;
+            display: flex;
+            /* border: 1px solid red; */
+        }
+        #acc>div{
+           width: 50%;
+           height: 100%;
+           /* border: 1px solid blue; */
+        }
+        #acc>div>p{
+            color:rgb(152,152,154)
+;
+            margin-top: 10px;
+        }
+        #track{
+            width: 100%;
+            height: 65%;
+            /* margin-top: 20px; */
+            display: grid;
+            gap: 6%;
+           
+            grid-template-columns: repeat(2,1fr);
+             /* border: 1px solid green; */ 
+        }
+        #track>div{
+            height: 100%;
+             /* border: 1px solid red;  */
+            border-radius: 7px;
+            background-color: rgba(245, 244, 244, 0.89);
+           
+        }
+        #track>div>div{
+            height: 15%;
+            padding: 10px;
+            background-color: rgb(228,228,228);
+            display: flex;
+            border-radius: 7px;
+            align-items: center;
+             /* border: 1px solid black; */ 
+        }
+        .abc{
+            color:rgb(102,102,102);
+        }
+      .abc:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: navy;
+      }
+      
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="acc">
+            <div>
+                <h2>YOUR ACCOUNT</h2>
+                <P style="font-weight: bold;margin-top: -15px;">Hi Guest, Welcome back to Reebok.</P>
+                <p>Everything you need to track your order, update your address book,edit your account information and more is right here.</p>
+            </div>
+          
+            <div style="text-align: end;margin-right: 10px;color: rgb(172, 164, 164);">Logout</div>
+        </div>
+        <div id="track">
+           <div>
+               <div><h3 style=" color: rgb(102,102,102);">Order Status & Tracking</h3></div>
+               <p onclick="window.location.href='orderStatusPage.html'" class="abc" style="padding: 10px;">ORDER STATUS/TRACKING</p>
+           </div>
+          
+           <div>
+              <div><h3 style=" color: rgb(102,102,102);">Personal Information</h3></div> 
+              <p style="padding: 10px;">Name :</p>
+              <p style="padding: 10px;">E-Mail :</p>
+           </div>
+           <div>
+               <div><h3 style=" color: rgb(102,102,102);">Account Features</h3></div>
+               <p onclick="window.location.href='profilePage.html'" class="abc" style="padding: 10px;">MY PROFILE</p>
+               <P class="abc" style="padding: 10px;">WISHLIST</P>
+           </div>
+        </div>
+        <div><p style="color: gray;">NOTE:This information will only be used in accordance with our <span style="color: black;">Pivacy Policy</span></p></div>
+    </div>
+</body>
+</html>

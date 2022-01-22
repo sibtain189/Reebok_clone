@@ -1,20 +1,18 @@
-var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-// console.log(cartData)
 
+var data =JSON.parse(localStorage.getItem("reebok-product-data"));
+var cartData = [];
+cartData.push(data)
+// console.log(cartData)
 if(cartData.length <= 0)
 {
     document.querySelector("#left").style.display="none";
     document.querySelector("#right").style.display="none";
     document.querySelector("#promo1").style.display="none";
     document.getElementById("start1").textContent = "There are no products in your Shopping Cart.";
-
 }
 else{
     printData(cartData)
 }
-
-
-
 
 function printData(cartData){
     document.querySelector("#left").innerHTML="";
@@ -57,7 +55,7 @@ function printData(cartData){
         color.textContent = "Color: "+items.color;
         color.style.fontFamily = "arial"
         var size = document.createElement("p");
-        size.textContent = "Size: "+items.size;
+        size.textContent = "Size: 7";
         size.style.fontFamily = "arial"
         var  productType = document.createElement("p");
         productType.textContent = items.productType;
@@ -121,8 +119,6 @@ function printData(cartData){
         div_items.append(div_ship,div);
         div.append(div1, div2, div3, div4);
         
-       
-
         document.querySelector("#left").append(div,div_items);
 
         abc();
@@ -136,7 +132,21 @@ function abc(){
         return (+a + +b.price);
     },0) 
     document.querySelector("#mrp").textContent= x;
-    document.querySelector("#diss").textContent = "10%";
+    document.querySelector("#mrp").style.fontSize = "18px"
+    document.querySelector("#diss").textContent = "10% OFF";
+    document.querySelector("#diss").style.color = "red"
     document.querySelector("#total").textContent = x*0.9;
 }
 
+
+function checkLogin(){
+
+    var check = localStorage.getItem("login-count")
+    // console.log(chack)
+
+    if(check==1){
+        window.location.href="http://127.0.0.1:5501/LoginPage/delivery.html"
+    }else{
+        window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+    }
+}

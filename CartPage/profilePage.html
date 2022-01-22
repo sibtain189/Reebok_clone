@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reebol-My Profile</title>
+    <link rel="stylesheet" href="profilePage.css">
+    <!-- <style>
+      #container{
+          width: 1200px;
+          height: 650px;
+          margin: auto;
+          /* border: 2px solid black; */
+      }
+      #cont{
+            width: 100%;
+            height: 20%;
+            /* padding: 10px; */
+            font-size: x-large;
+            font-weight: bolder;
+            /* border: 1px solid red; */
+      }
+      #cont2{
+            width: 100%;
+            height: 70%;
+            /* border: 1px solid blue; */
+      }
+      #cont3{
+          height: 50%;
+          display: grid;
+          gap: 5%;
+          padding: 2%;
+          background-color: rgb(246,246,246);
+          grid-template-columns: repeat(2,1fr);
+          /* border: 1px solid red; */
+      }
+      #cont3>div{
+          height: 100%;
+          /* border: 1px solid green; */
+      }
+      .bottom1{
+            height: 10%;
+            width: 100%;
+            display: flex;
+            padding-left: 10px;
+            align-items: center;
+            /* border: 1px solid rgb(182, 20, 95); */
+      }
+      input{
+          width: 96%;
+          height: 60%;
+          padding-left: 2%;
+          border: 1px solid gray;
+          border-radius: 2px;
+          background-color:rgb(228,228,228);
+      }
+      button{
+          height: 45%;
+          width: 35%;
+          border-radius: 5px;
+          border: none;
+          background-color:rgb(102,102,102);
+          color: white;
+          font-size: small;
+          font-weight: bold;
+      }
+      #gender input{
+          height: 15px;
+          width: 15px;
+
+      }
+      label{
+          font-weight: bold;
+      }
+      .bottom1 button{
+          /* margin-top: 10px; */
+          margin-left: 1%;
+          height: 50%;
+          width: 7%;
+      }
+    </style> -->
+   
+</head>
+<body>
+    <div id="container">
+        <div id="cont">MY PROFILE</div>
+        <div id="cont2">
+           
+                <div class="bottom1" style="color: rgb(105, 102, 102);font-weight: bold;">Personal Details</div>
+               
+                <div id="cont3">
+                    <div>
+                        <label for="">*First Name:</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div> 
+                        <label for="">*Last Name:</label>
+                        <input type="text" placeholder="last Name">
+                    </div>
+                    <div>
+                        <label for="">Email:</label>
+                        <input type="text" placeholder="Enter Email ID">
+                    </div>
+                    <div> 
+                        <label for="">Mobile Number:</label>
+                        <input type="number" placeholder="Enter Mob Number"> </div>
+                    <div id="gender">
+                        <p style="font-weight: bold;display: inline-block;">Gender:</p>   
+
+                        <input type="radio"name="gender" value="Male"><span>Male</span>
+                        <input type="radio"name="gender" value="female"><span>Female</span>
+                    </div>
+                    <button>Change Your Password</button>
+                </div>
+                <div class="bottom1"style="color: rgb(105, 102, 102);font-weight: bold;">
+                    Shipping Address details
+                </div>
+                <div class="bottom1"style="color: rgb(105, 102, 102);font-weight: bold;">
+                    <button>Edit</button>
+                    <button onclick="window.location.href='home.html'">Cancel</button>
+                </div>
+        
+        </div>
+    </div>
+</body>
+</html>

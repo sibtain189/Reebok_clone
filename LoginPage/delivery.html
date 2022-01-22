@@ -9,24 +9,28 @@
 </head>
 <body>
     <div id="container">
-        <div class="head"></div>
+        <div class="head">
+            <div><span class="number">1</span> Bag</div>
+            <div style="background-color: rgb(246,246,246);"><span class="number" style="background-color: rgb(255, 154, 136);">2</span>Delivery</div>
+            <div> <span class="number">3</span>Payment</div>
+        </div>
         <div id="details">
             <div id="left">
-                <h1 style="margin-bottom: 9%;">BILLING ADDRESS</h1>
+                <h2 style="margin-bottom: 6%;">BILLING ADDRESS</h2>
                 <p>All Fields Are Required Unless Otherwise Noted.</p>
                 <hr>
-                <h3>Country - India</h3>
+                <h4>Country - India</h4>
                 <div id="leftitem">
                     <form>
                         <div class="flex">
-                            <div><input type="text" id="f_name" placeholder="*First Name"></div>
-                            <p id="first_name"></p>
-                            <div><input type="text" id="l_name" placeholder="*Last Name"></div>
-                            <p id="last_name"></p>
+                            <div><input type="text" id="f_name" placeholder="*First Name"><p id="first_name"></p></div>
+                            
+                            <div><input type="text" id="l_name" placeholder="*Last Name"><p id="last_name"></p></div>
+                            
                         </div>
-                        <div><input type="text" id="address" placeholder="*Street Address, City"><p></p></div>
+                        <div><input type="text" id="address" placeholder="*Street Address, City"><p id="wrong_address"></p></div>
                         <div class="flex">
-                            <div><input type="text" id="l_mark" placeholder="*Landmark"></div>
+                            <div><input type="text" id="l_mark" placeholder="*Landmark"><p id="wrong_l_mark"></p></div>
                             <div><select name="state" id="state" class="form-control" style="height: 35px; width: 100%;">
                                 <option value="">--*Select State--</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -65,21 +69,44 @@
                                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                                 <option value="Uttarakhand">Uttarakhand</option>
                                 <option value="West Bengal">West Bengal</option>
-                            </select></div>
-                            
+                            </select><p id="wrongState"></p></div>                          
                         </div>
     
-                        <div><input type="text" id="pincode" placeholder="*Enter Pincode"></div>
-                        <div><input type="number" id="m_number" placeholder="*9999999999"></div>
+                        <div><input type="text" id="pincode" placeholder="*Enter Pincode"><p id="wrongPin"></p></div>
+                        <div><input type="number" id="m_number" placeholder="*9999999999"><p id="wrong_number"></p></div>
     
-                        <p>*Mandatory fields</p>
+                        <p style="color: black; font-size: 14px;">*Mandatory fields</p>
                     </form>
                 </div>
                 <hr style="background-color: black; border: solid;">
                 <input type="checkbox" name="" id=""> Save this Address and Phone Number to my Profile.
+                <p id="error"></p>
                 <button onclick="checkout()">continue checkout</button>
+                
             </div>
-            <div id="right"></div>
+            <div id="right">
+                Order Summary( <span id="right_count"></span> Items)
+                <div class="right12">
+                    <div id="js"></div>
+                    <!-- <div id="right_img" style="border: solid; width: 45%;"></div>
+                    <div id="right_detail" style="width: 55%; border: solid;"></div> -->
+                </div>
+                <div class="right1">
+                    <div style="width: 60%; border-right: 1px solid rgb(179, 179, 179);">Merchandise subtotal <br> (Incl Item Discounts)</div>
+                    <div style="width: 40%;" id="one"></div>
+                
+                </div>
+                <div class="right1" style="border-top: 1px solid rgb(175, 175, 175);">
+                    <div style="width: 60%; border-right: 1px solid rgb(179, 179, 179);">Merchandise subtotal <br> (Incl Item Discounts)</div>
+                    <div style="width: 40%;" id="two"></div>
+                
+                </div>
+                <div class="right1" style="border-top: 1px solid rgb(192, 192, 192);">
+                    <div style="width: 50%;border-right: 1px solid rgb(179, 179, 179); font-weight: bolder; font-size: large;">Total</div>
+                    <div style="width: 50%; font-size: x-large;" id="three"></div>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </body>
