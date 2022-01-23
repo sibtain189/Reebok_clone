@@ -128,14 +128,14 @@
                 <h4>Authenticate Payment</h4>
                 <p>OTP sent to your mobile number ending with xxx-xxx-<span id="number"></span></p>
                 <label for="otp">Enter One Time Password (OTP)</label>
-                <input type="text">
+                <input type="text" placeholder="Enter your OTP (eg. 123456)">
                 <button onclick="payment()">Make Payment</button>
             </div>
             <div id="four">
                 <p id="done" style="color: navy;"></p>
                 <p id="resend" onclick="resend()">Resend OTP</p>
                 <p style="color: green; font-size: x-small;" id="success" ></p>
-                <p id="abort">Click here to abort transaction and go back to merchant site</p>
+                <p id="abort" onclick="gotohome()">Click here to abort transaction and go back to merchant site</p>
             </div>
         </div>
     </div>
@@ -156,6 +156,7 @@
         if(document.querySelector("input").value == "123456") {
             alert("Payment Successful");
             document.getElementById("done").textContent = "Payment is successful !! Thank you for shopping with us.";
+            document.getElementById("done").style.color = "green";
         }
         else {
             document.getElementById("done").textContent = "Wrong OTP Entered!!";
@@ -176,4 +177,9 @@
     }
 
     document.getElementById("number").textContent = bag;
+
+
+    function gotohome() {
+        window.location.href = "../HomePage/home.html";
+    }
 </script>

@@ -90,7 +90,7 @@ function displayItems(womens_data) {
 function addProductToCart(index) {
   cart_Data.push(womens_data[index]);
   localStorage.setItem("reebok-cart-data", JSON.stringify(cart_Data));
-  alert("Added to Cart Successfully..configure the page");
+  // alert("Added to Cart Successfully..configure the page");
   window.location.href="#";
 }
 
@@ -117,7 +117,7 @@ function sortItems() {
 }
 
 function goToProductPage(item) {
-  alert("going to product page..configure page");
+  // alert("going to product page..configure page");
     // productData.push(item);
     localStorage.setItem("reebok-product-data",JSON.stringify(item));
     //Go to Product Page link

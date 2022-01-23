@@ -129,7 +129,7 @@ function displayItems(mens_data) {
   function goToProductPage(item) {
     // var productData={};
     // var productData=JSON.parse(localStorage.getItem("reebok-product-data"))||[];
-    alert("going to product page..configure page");
+    
     // productData.push(item);
     localStorage.setItem("reebok-product-data",JSON.stringify(item));
     //Go to Product Page link
