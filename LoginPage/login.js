@@ -56,17 +56,17 @@ function leftSign(event) {
 
     user_login.map(function(item) {
       if(item.email == a && item.pass == b) {
-        alert("login Succesfull redirecting to homepage");
+        //alert("login Succesfull redirecting to homepage");
          count++;
          localStorage.setItem("login-count",count)
-         window.location.href="http://127.0.0.1:5501/HomePage/home.html"
+         window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
       }
     });
 
     if(count == 0) {
       // alert("Wrong Credentials!!");
       document.querySelector("#wrongDetails").textContent = "Sorry!! wrong credentials";
-      localStorage.setItem("login-count",count)
+      //localStorage.setItem("login-count",count)
     }
   }
 }
