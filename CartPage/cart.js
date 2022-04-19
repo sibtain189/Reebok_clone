@@ -145,8 +145,26 @@ function checkLogin(){
     // console.log(chack)
 
     if(check==1){
+        check=0;
+        localStorage.setItem("login-count",check)
         window.location.href="http://127.0.0.1:5501/LoginPage/delivery.html"
+        
     }else{
         window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+
     }
 }
+
+
+function Login(){
+    window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+  }
+  
+  function goToCart(){
+    window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
+  }
+  
+  
+  function goToHome(){
+    window.location.href="http://127.0.0.1:5501/HomePage/home.html"
+  }

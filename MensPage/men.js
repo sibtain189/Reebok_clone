@@ -50,8 +50,20 @@ function displayItems(mens_data) {
     size.setAttribute("class", "rb-product-size");
     size.textContent = "SIZE  (UK) " + item.size.join(" ");
 
+
     var price_span = document.createElement("span");
     price_span.append(price, strike_price);
+
+  function goToProductPage(item) {
+    // var productData={};
+    // var productData=JSON.parse(localStorage.getItem("reebok-product-data"))||[];
+    
+    // productData.push(item);
+    localStorage.setItem("reebok-product-data",JSON.stringify(item));
+    //Go to Product Page link
+    window.location.href = "http://127.0.0.1:5501/ProductPage/product.html";
+  }
+
 
     var details_div = document.createElement("div");
     details_div.setAttribute("class", "rb-product-details");

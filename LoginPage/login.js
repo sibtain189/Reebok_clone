@@ -56,20 +56,18 @@ function leftSign(event) {
 
     user_login.map(function(item) {
       if(item.email == a && item.pass == b) {
-        alert("login Succesfull");
+        //alert("login Succesfull redirecting to homepage");
          count++;
          localStorage.setItem("login-count",count)
-         window.location.href="http://127.0.0.1:5501/HomePage/home.html"
+         window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
       }
-
-      
 
     });
 
     if(count == 0) {
-      alert("Wrong Credentials!!");
+      // alert("Wrong Credentials!!");
       document.querySelector("#wrongDetails").textContent = "Sorry!! wrong credentials";
-      localStorage.setItem("login-count",count)
+      //localStorage.setItem("login-count",count)
     }
   }
 }
@@ -137,7 +135,7 @@ function middleSign(event) {
       window.location.href="login.html"
     }
     else if(d.length < 8){
-      alert("password id too short")
+      alert("password id too short");
     }
     else {
       alert("Password in not matching");
@@ -146,3 +144,16 @@ function middleSign(event) {
   }
 }
 
+
+
+function Login(){
+  window.location.href="http://127.0.0.1:5501/LoginPage/login.html"
+}
+
+function goToCart(){
+  window.location.href="http://127.0.0.1:5501/CartPage/cart.html"
+}
+
+function goToHome(){
+  window.location.href="http://127.0.0.1:5501/HomePage/home.html"
+}
