@@ -18,23 +18,27 @@ Project: make a clone of https://shop4reebok.com/ site
 ## Snapshots 📷
 - Landing Page (Home Page):
   
-![Home Page]()
+![Home Page](https://user-images.githubusercontent.com/97461845/165697949-ac1ac22a-9e21-4445-b960-81a613088330.png)
 
 - Men Page:
   
-![Men Page]()
+![Men Page](https://user-images.githubusercontent.com/97461845/165698206-cad03cf8-0546-4337-9b81-fa2815d57476.png)
 
 - Women Page:
   
-![Women Page](g)
+![Women Page](https://user-images.githubusercontent.com/97461845/165698413-7cc8f258-2bc1-4356-98ce-49c474b1fc31.png)
 
 - Product Page:
   
-![Product Page]()
+![Product Page](https://user-images.githubusercontent.com/97461845/165698294-91b1067e-26c6-4286-baf1-5b93bb711449.png)
 
-- cart Page:
+- Cart Page:
   
-![cart Page]()
+![Cart Page](https://user-images.githubusercontent.com/97461845/165698767-687ae65e-56ea-45ba-872f-ab18dd1761e9.png)
+
+- SignIn & SignUp Page:
+  
+![SignIn & SignUp Page](https://user-images.githubusercontent.com/97461845/165699263-d3873012-f658-4b60-807a-bb887d3aee45.png)
 
 ### End Notes 📑
 In this project we were tried to achieve a near to perfect clone of the original website as much as possible with very limited knowledge of javascript & css. This entire journey of has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. If we have more time we can able to add more products.
@@ -46,19 +50,19 @@ All pages are not responsive yet , those pages are might not be properly visible
 ## Team Members and Contributors 😇 :
 
 - 👤 Sibtain Ahmed
-  Github: https://github.com/
+  Github: https://github.com/sibtain189
   
 - 👤 Mohammed Mustaq
   Github: https://github.com/mustaq-amd
   
 - 👤 Shekhar Soni
-  Github: https://github.com/
+  Github: https://github.com/shekharsoni99
   
-- 👤 Priyanka 
-  Github: https://github.com/
+- 👤 Priyanka Mahale
+  Github: https://github.com/Primahale
   
 - 👤 Rahul Kumar
-  Github: https://github.com/
+  Github: https://github.com/Gitadmasai
 
 
 # Link to the website : 
